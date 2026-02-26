@@ -1,0 +1,135 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L SerialIOProc-rescue:Conn_01x01-conn M?
+U 1 1 5AC0BC23
+P 2700 1200
+AR Path="/5AC0BC23" Ref="M?"  Part="1" 
+AR Path="/5BA655A7/5AC0BC23" Ref="M3"  Part="1" 
+AR Path="/5EE3FE63/5DDB5971/5AC0BC23" Ref="M16"  Part="1" 
+F 0 "M3" H 2700 1300 50  0000 C CNN
+F 1 "Conn_01x01" H 2700 1100 50  0000 C CNN
+F 2 "CLRConnector:Mounting#4" H 2700 1200 50  0001 C CNN
+F 3 "" H 2700 1200 50  0001 C CNN
+	1    2700 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L SerialIOProc-rescue:Conn_01x01-conn M?
+U 1 1 5CF04EB7
+P 2700 2150
+AR Path="/5CF04EB7" Ref="M?"  Part="1" 
+AR Path="/5BA655A7/5CF04EB7" Ref="M5"  Part="1" 
+AR Path="/5EE3FE63/5DDB5971/5CF04EB7" Ref="M18"  Part="1" 
+F 0 "M5" H 2700 2250 50  0000 C CNN
+F 1 "Conn_01x01" H 2700 2050 50  0000 C CNN
+F 2 "CLRConnector:Mounting#4" H 2700 2150 50  0001 C CNN
+F 3 "" H 2700 2150 50  0001 C CNN
+	1    2700 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L SerialIOProc-rescue:Conn_01x01-conn M?
+U 1 1 5D080160
+P 1950 1500
+AR Path="/5D080160" Ref="M?"  Part="1" 
+AR Path="/5BA655A7/5D080160" Ref="M1"  Part="1" 
+AR Path="/5EE3FE63/5DDB5971/5D080160" Ref="M14"  Part="1" 
+F 0 "M1" H 1950 1600 50  0000 C CNN
+F 1 "Conn_01x01" H 1950 1400 50  0000 C CNN
+F 2 "CLRConnector:Mounting#4" H 1950 1500 50  0001 C CNN
+F 3 "" H 1950 1500 50  0001 C CNN
+	1    1950 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L SerialIOProc-rescue:Conn_01x01-conn M?
+U 1 1 5D080167
+P 1950 2150
+AR Path="/5D080167" Ref="M?"  Part="1" 
+AR Path="/5BA655A7/5D080167" Ref="M2"  Part="1" 
+AR Path="/5EE3FE63/5DDB5971/5D080167" Ref="M15"  Part="1" 
+F 0 "M2" H 1950 2250 50  0000 C CNN
+F 1 "Conn_01x01" H 1950 2050 50  0000 C CNN
+F 2 "CLRConnector:Mounting#4" H 1950 2150 50  0001 C CNN
+F 3 "" H 1950 2150 50  0001 C CNN
+	1    1950 2150
+	1    0    0    -1  
+$EndComp
+Text GLabel 1750 2150 0    50   Input ~ 0
+SAMPWR
+$Comp
+L power:GND #PWR0108
+U 1 1 5F3DE6BF
+P 2500 2150
+AR Path="/5EE3FE63/5DDB5971/5F3DE6BF" Ref="#PWR0108"  Part="1" 
+AR Path="/5BA655A7/5F3DE6BF" Ref="#PWR0103"  Part="1" 
+F 0 "#PWR0103" H 2500 1900 50  0001 C CNN
+F 1 "GND" H 2505 1977 50  0000 C CNN
+F 2 "" H 2500 2150 50  0001 C CNN
+F 3 "" H 2500 2150 50  0001 C CNN
+	1    2500 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5F3DE6F2
+P 1750 1500
+AR Path="/5EE3FE63/5DDB5971/5F3DE6F2" Ref="#PWR0109"  Part="1" 
+AR Path="/5BA655A7/5F3DE6F2" Ref="#PWR0104"  Part="1" 
+F 0 "#PWR0104" H 1750 1250 50  0001 C CNN
+F 1 "GND" H 1755 1327 50  0000 C CNN
+F 2 "" H 1750 1500 50  0001 C CNN
+F 3 "" H 1750 1500 50  0001 C CNN
+	1    1750 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 5F3DE73E
+P 2500 1200
+AR Path="/5EE3FE63/5DDB5971/5F3DE73E" Ref="#PWR0110"  Part="1" 
+AR Path="/5BA655A7/5F3DE73E" Ref="#PWR0105"  Part="1" 
+F 0 "#PWR0105" H 2500 950 50  0001 C CNN
+F 1 "GND" H 2505 1027 50  0000 C CNN
+F 2 "" H 2500 1200 50  0001 C CNN
+F 3 "" H 2500 1200 50  0001 C CNN
+	1    2500 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L SerialIOProc-rescue:Conn_01x03-conn J5
+U 1 1 631B73E5
+P 2600 2900
+F 0 "J5" H 2680 2942 50  0000 L CNN
+F 1 "Conn_01x03-conn" H 2680 2851 50  0000 L CNN
+F 2 "CLRLibrary:Phoenix1202713 DIN Rail" H 2600 2900 50  0001 C CNN
+F 3 "" H 2600 2900 50  0001 C CNN
+	1    2600 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L SerialIOProc-rescue:Conn_01x03-conn J24
+U 1 1 631B7814
+P 2600 3300
+F 0 "J24" H 2680 3342 50  0000 L CNN
+F 1 "Conn_01x03-conn" H 2680 3251 50  0000 L CNN
+F 2 "CLRLibrary:Phoenix1202713 DIN Rail" H 2600 3300 50  0001 C CNN
+F 3 "" H 2600 3300 50  0001 C CNN
+	1    2600 3300
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

@@ -1,0 +1,2122 @@
+EESchema Schematic File Version 4
+LIBS:SAMDriver32-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 10 10
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L SerialIOProc-rescue:74HC595 U?
+U 1 1 5D07AF1B
+P 5700 4300
+AR Path="/5CFC7757/5D07AF1B" Ref="U?"  Part="1" 
+AR Path="/5CFEE74D/5D07AF1B" Ref="U?"  Part="1" 
+AR Path="/5CE81FF5/5D07AF1B" Ref="U?"  Part="1" 
+AR Path="/5CE982AE/5D07AF1B" Ref="U?"  Part="1" 
+AR Path="/5BA655A7/5D01C728/5D07AF1B" Ref="U?"  Part="1" 
+AR Path="/5D01CD70/5D07AF1B" Ref="U15"  Part="1" 
+AR Path="/5D08CCAD/5D07AF1B" Ref="U?"  Part="1" 
+AR Path="/5D117FD0/5D07AF1B" Ref="U?"  Part="1" 
+AR Path="/5D117FE1/5D07AF1B" Ref="U17"  Part="1" 
+F 0 "U17" H 5850 4900 50  0000 C CNN
+F 1 "74HC595D,118" H 5700 3700 50  0000 C CNN
+F 2 "SMD_Packages:SO-16-N" H 5700 4300 50  0001 C CNN
+F 3 "" H 5700 4300 50  0001 C CNN
+	1    5700 4300
+	1    0    0    -1  
+$EndComp
+Text Label 4350 4350 0    60   ~ 0
+OutRegLoad
+Text Label 4350 4150 0    60   ~ 0
+OutRST
+Text Label 4350 4050 0    60   ~ 0
+OutSerCK
+Text Label 8350 4750 0    60   ~ 0
+SAMOut3
+$Comp
+L SerialIOProc-rescue:74HC595 U?
+U 1 1 5D07AF14
+P 3200 4300
+AR Path="/5CFC7757/5D07AF14" Ref="U?"  Part="1" 
+AR Path="/5CFEE74D/5D07AF14" Ref="U?"  Part="1" 
+AR Path="/5CE81FF5/5D07AF14" Ref="U?"  Part="1" 
+AR Path="/5CE982AE/5D07AF14" Ref="U?"  Part="1" 
+AR Path="/5BA655A7/5D01C728/5D07AF14" Ref="U?"  Part="1" 
+AR Path="/5D01CD70/5D07AF14" Ref="U14"  Part="1" 
+AR Path="/5D08CCAD/5D07AF14" Ref="U?"  Part="1" 
+AR Path="/5D117FD0/5D07AF14" Ref="U?"  Part="1" 
+AR Path="/5D117FE1/5D07AF14" Ref="U16"  Part="1" 
+F 0 "U16" H 3350 4900 50  0000 C CNN
+F 1 "74HC595D,118" H 3200 3700 50  0000 C CNN
+F 2 "SMD_Packages:SO-16-N" H 3200 4300 50  0001 C CNN
+F 3 "" H 3200 4300 50  0001 C CNN
+	1    3200 4300
+	1    0    0    -1  
+$EndComp
+Text Label 1850 4150 0    60   ~ 0
+OutRST
+Text Label 1850 4050 0    60   ~ 0
+OutSerCK
+$Comp
+L power:VDD #PWR?
+U 1 1 5D07AF16
+P 8400 3600
+AR Path="/5CFC7757/5D07AF16" Ref="#PWR?"  Part="1" 
+AR Path="/5CFEE74D/5D07AF16" Ref="#PWR?"  Part="1" 
+AR Path="/5CE81FF5/5D07AF16" Ref="#PWR?"  Part="1" 
+AR Path="/5CE982AE/5D07AF16" Ref="#PWR?"  Part="1" 
+AR Path="/5BA655A7/5D01C728/5D07AF16" Ref="#PWR?"  Part="1" 
+AR Path="/5D01CD70/5D07AF16" Ref="#PWR057"  Part="1" 
+AR Path="/5D08CCAD/5D07AF16" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FD0/5D07AF16" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FE1/5D07AF16" Ref="#PWR0137"  Part="1" 
+F 0 "#PWR0137" H 8400 3450 50  0001 C CNN
+F 1 "VDD" H 8400 3750 50  0000 C CNN
+F 2 "" H 8400 3600 50  0001 C CNN
+F 3 "" H 8400 3600 50  0001 C CNN
+	1    8400 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 4750 7800 4750
+Wire Wire Line
+	8400 3700 8400 3600
+Wire Wire Line
+	3900 4750 4750 4750
+Wire Wire Line
+	4750 4750 4750 3850
+Wire Wire Line
+	4750 3850 5000 3850
+Wire Wire Line
+	4350 4150 5000 4150
+Wire Wire Line
+	2500 4150 2300 4150
+Wire Wire Line
+	1850 4050 2350 4050
+Wire Wire Line
+	4350 4050 5000 4050
+Wire Wire Line
+	5000 4350 4350 4350
+Wire Wire Line
+	4350 4350 4350 4450
+Wire Wire Line
+	2500 4350 2450 4350
+Wire Wire Line
+	2400 4350 2400 4450
+Wire Wire Line
+	2400 4450 2500 4450
+$Comp
+L Device:C C?
+U 1 1 5D07AF03
+P 8250 3900
+AR Path="/5CFC7757/5D07AF03" Ref="C?"  Part="1" 
+AR Path="/5CFEE74D/5D07AF03" Ref="C?"  Part="1" 
+AR Path="/5CE81FF5/5D07AF03" Ref="C?"  Part="1" 
+AR Path="/5CE982AE/5D07AF03" Ref="C?"  Part="1" 
+AR Path="/5BA655A7/5D01C728/5D07AF03" Ref="C?"  Part="1" 
+AR Path="/5D01CD70/5D07AF03" Ref="C74"  Part="1" 
+AR Path="/5D08CCAD/5D07AF03" Ref="C?"  Part="1" 
+AR Path="/5D117FD0/5D07AF03" Ref="C?"  Part="1" 
+AR Path="/5D117FE1/5D07AF03" Ref="C74"  Part="1" 
+F 0 "C74" H 8275 4000 50  0000 L CNN
+F 1 "302010138" H 8275 3800 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-1608-08_AVX-J" H 8288 3750 50  0001 C CNN
+F 3 "" H 8250 3900 50  0001 C CNN
+	1    8250 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 3750 8250 3700
+Wire Wire Line
+	8450 3700 8450 3750
+Connection ~ 8400 3700
+Wire Wire Line
+	8650 3700 8650 3750
+Connection ~ 8450 3700
+Wire Wire Line
+	8250 4050 8250 4100
+Wire Wire Line
+	8450 4050 8450 4100
+Connection ~ 8450 4100
+Wire Wire Line
+	8650 4050 8650 4100
+Connection ~ 8650 4100
+$Comp
+L Device:C C?
+U 1 1 5D0F64C7
+P 8850 3900
+AR Path="/5CFC7757/5D0F64C7" Ref="C?"  Part="1" 
+AR Path="/5CFEE74D/5D0F64C7" Ref="C?"  Part="1" 
+AR Path="/5CE81FF5/5D0F64C7" Ref="C?"  Part="1" 
+AR Path="/5CE982AE/5D0F64C7" Ref="C?"  Part="1" 
+AR Path="/5BA655A7/5D01C728/5D0F64C7" Ref="C?"  Part="1" 
+AR Path="/5D01CD70/5D0F64C7" Ref="C75"  Part="1" 
+AR Path="/5D08CCAD/5D0F64C7" Ref="C?"  Part="1" 
+AR Path="/5D117FD0/5D0F64C7" Ref="C?"  Part="1" 
+AR Path="/5D117FE1/5D0F64C7" Ref="C75"  Part="1" 
+F 0 "C75" H 8875 4000 50  0000 L CNN
+F 1 "302010138" H 8875 3800 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-1608-08_AVX-J" H 8888 3750 50  0001 C CNN
+F 3 "" H 8850 3900 50  0001 C CNN
+	1    8850 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 4100 8850 4050
+Connection ~ 8850 4100
+Wire Wire Line
+	8850 3700 8850 3750
+Connection ~ 8650 3700
+Connection ~ 8850 3700
+$Comp
+L power:VCC #PWR?
+U 1 1 5D07AF1E
+P 9050 3600
+AR Path="/5CFC7757/5D07AF1E" Ref="#PWR?"  Part="1" 
+AR Path="/5CFEE74D/5D07AF1E" Ref="#PWR?"  Part="1" 
+AR Path="/5CE81FF5/5D07AF1E" Ref="#PWR?"  Part="1" 
+AR Path="/5CE982AE/5D07AF1E" Ref="#PWR?"  Part="1" 
+AR Path="/5BA655A7/5D01C728/5D07AF1E" Ref="#PWR?"  Part="1" 
+AR Path="/5D01CD70/5D07AF1E" Ref="#PWR058"  Part="1" 
+AR Path="/5D08CCAD/5D07AF1E" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FD0/5D07AF1E" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FE1/5D07AF1E" Ref="#PWR0138"  Part="1" 
+F 0 "#PWR0138" H 9050 3450 50  0001 C CNN
+F 1 "VCC" H 9050 3750 50  0000 C CNN
+F 2 "" H 9050 3600 50  0001 C CNN
+F 3 "" H 9050 3600 50  0001 C CNN
+	1    9050 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 3600 9050 3700
+Wire Wire Line
+	9050 3700 8850 3700
+$Comp
+L power:GND #PWR?
+U 1 1 5D07AF21
+P 9100 4100
+AR Path="/5CFC7757/5D07AF21" Ref="#PWR?"  Part="1" 
+AR Path="/5CFEE74D/5D07AF21" Ref="#PWR?"  Part="1" 
+AR Path="/5CE81FF5/5D07AF21" Ref="#PWR?"  Part="1" 
+AR Path="/5CE982AE/5D07AF21" Ref="#PWR?"  Part="1" 
+AR Path="/5BA655A7/5D01C728/5D07AF21" Ref="#PWR?"  Part="1" 
+AR Path="/5D01CD70/5D07AF21" Ref="#PWR059"  Part="1" 
+AR Path="/5D08CCAD/5D07AF21" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FD0/5D07AF21" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FE1/5D07AF21" Ref="#PWR0139"  Part="1" 
+F 0 "#PWR0139" H 9100 3850 50  0001 C CNN
+F 1 "GND" H 9100 3950 50  0000 C CNN
+F 2 "" H 9100 4100 50  0001 C CNN
+F 3 "" H 9100 4100 50  0001 C CNN
+	1    9100 4100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8250 4100 8450 4100
+Wire Wire Line
+	8400 3700 8250 3700
+Wire Wire Line
+	8450 3700 8400 3700
+Wire Wire Line
+	8450 4100 8650 4100
+Wire Wire Line
+	8650 4100 8850 4100
+Wire Wire Line
+	8850 4100 9100 4100
+Wire Wire Line
+	8650 3700 8450 3700
+Wire Wire Line
+	8850 3700 8650 3700
+Wire Wire Line
+	4350 4450 5000 4450
+Wire Wire Line
+	1300 3850 1600 3850
+Text HLabel 9250 4750 2    50   Input ~ 0
+SAMOut3
+Text HLabel 1300 3850 0    50   Input ~ 0
+SAMIn3
+Text HLabel 1850 4050 0    50   Input ~ 0
+OutSerCK
+Text HLabel 1850 4150 0    50   Input ~ 0
+OutRST
+Text HLabel 1850 4350 0    50   Input ~ 0
+OutRegLoad
+Wire Wire Line
+	1850 4350 2400 4350
+Connection ~ 2400 4350
+Wire Wire Line
+	2400 5100 4350 5100
+Wire Wire Line
+	4350 5100 4350 4450
+Connection ~ 2400 4450
+Connection ~ 4350 4450
+Text Label 1800 3850 0    50   ~ 0
+SAMIn3
+Text HLabel 1050 4850 0    50   UnSpc ~ 0
+SAMPWR
+Wire Wire Line
+	1200 7100 850  7100
+Text Label 950  7100 0    50   ~ 0
+DRVD02
+Wire Wire Line
+	1200 7600 850  7600
+Text Label 950  7600 0    50   ~ 0
+DRVD03
+Wire Wire Line
+	1050 5600 700  5600
+Text Label 800  5600 0    50   ~ 0
+DRVD00
+Wire Wire Line
+	1050 6100 700  6100
+Text Label 800  6100 0    50   ~ 0
+DRVD01
+Wire Wire Line
+	2400 4450 2400 5100
+Text Label 3300 5400 0    50   ~ 0
+SAMD00
+Text Label 3300 5600 0    50   ~ 0
+SAMD01
+Text Label 3250 6900 0    50   ~ 0
+SAMD02
+Text Label 3250 7100 0    50   ~ 0
+SAMD03
+Wire Wire Line
+	1050 4850 1750 4850
+Text Label 1150 4850 0    50   ~ 0
+SAMPWR
+Wire Wire Line
+	4500 6950 4150 6950
+Text Label 4250 6950 0    50   ~ 0
+DRVD06
+Wire Wire Line
+	4500 7450 4150 7450
+Text Label 4250 7450 0    50   ~ 0
+DRVD07
+Wire Wire Line
+	4350 5450 4000 5450
+Text Label 4100 5450 0    50   ~ 0
+DRVD04
+Wire Wire Line
+	4350 5950 4000 5950
+Text Label 4100 5950 0    50   ~ 0
+DRVD05
+Text Label 6600 5250 0    50   ~ 0
+SAMD04
+Text Label 6600 5450 0    50   ~ 0
+SAMD05
+Text Label 6550 6750 0    50   ~ 0
+SAMD06
+Text Label 6550 6950 0    50   ~ 0
+SAMD07
+Wire Wire Line
+	3900 3850 4200 3850
+Text Label 4000 3850 0    50   ~ 0
+DRVD00
+Wire Wire Line
+	3900 3950 4200 3950
+Text Label 4000 3950 0    50   ~ 0
+DRVD01
+Wire Wire Line
+	3900 4050 4200 4050
+Text Label 4000 4050 0    50   ~ 0
+DRVD02
+Wire Wire Line
+	3900 4150 4200 4150
+Text Label 4000 4150 0    50   ~ 0
+DRVD03
+Wire Wire Line
+	3900 4250 4200 4250
+Text Label 4000 4250 0    50   ~ 0
+DRVD04
+Wire Wire Line
+	3900 4350 4200 4350
+Text Label 4000 4350 0    50   ~ 0
+DRVD05
+Wire Wire Line
+	3900 4450 4200 4450
+Text Label 4000 4450 0    50   ~ 0
+DRVD06
+Wire Wire Line
+	3900 4550 4200 4550
+Text Label 4000 4550 0    50   ~ 0
+DRVD07
+Wire Wire Line
+	6400 3850 6700 3850
+Text Label 6500 3850 0    50   ~ 0
+DRVD08
+Wire Wire Line
+	6400 3950 6700 3950
+Text Label 6500 3950 0    50   ~ 0
+DRVD09
+Wire Wire Line
+	6400 4050 6700 4050
+Text Label 6500 4050 0    50   ~ 0
+DRVD10
+Wire Wire Line
+	6400 4150 6700 4150
+Text Label 6500 4150 0    50   ~ 0
+DRVD11
+Wire Wire Line
+	6400 4250 6700 4250
+Text Label 6500 4250 0    50   ~ 0
+DRVD12
+Wire Wire Line
+	6400 4350 6700 4350
+Text Label 6500 4350 0    50   ~ 0
+DRVD13
+Wire Wire Line
+	6400 4450 6700 4450
+Text Label 6500 4450 0    50   ~ 0
+DRVD14
+Wire Wire Line
+	6400 4550 6700 4550
+Text Label 6500 4550 0    50   ~ 0
+DRVD15
+$Comp
+L Device:R_Pack04 RN?
+U 1 1 5D07AF47
+P 2300 2100
+AR Path="/5CFC7757/5D07AF47" Ref="RN?"  Part="1" 
+AR Path="/5CFEE74D/5D07AF47" Ref="RN?"  Part="1" 
+AR Path="/5CE81FF5/5D07AF47" Ref="RN?"  Part="1" 
+AR Path="/5CE982AE/5D07AF47" Ref="RN?"  Part="1" 
+AR Path="/5BA655A7/5D01C728/5D07AF47" Ref="RN?"  Part="1" 
+AR Path="/5D01CD70/5D07AF47" Ref="RN34"  Part="1" 
+AR Path="/5D08CCAD/5D07AF47" Ref="RN?"  Part="1" 
+AR Path="/5D117FD0/5D07AF47" Ref="RN?"  Part="1" 
+AR Path="/5D117FE1/5D07AF47" Ref="RN48"  Part="1" 
+F 0 "RN48" V 2000 2100 50  0000 C CNN
+F 1 "R_Pack04" V 2500 2100 50  0000 C CNN
+F 2 "CLRConnector:2012-8" V 2575 2100 50  0001 C CNN
+F 3 "" H 2300 2100 50  0001 C CNN
+	1    2300 2100
+	0    -1   1    0   
+$EndComp
+$Comp
+L CLRLibrary:6N7002 Q?
+U 1 1 5D07AF4A
+P 1450 2450
+AR Path="/5BA655A7/5D01C728/5D07AF4A" Ref="Q?"  Part="1" 
+AR Path="/5D01CD70/5D07AF4A" Ref="Q4"  Part="1" 
+AR Path="/5D08CCAD/5D07AF4A" Ref="Q?"  Part="1" 
+AR Path="/5D117FD0/5D07AF4A" Ref="Q?"  Part="1" 
+AR Path="/5D117FE1/5D07AF4A" Ref="Q96"  Part="1" 
+F 0 "Q96" H 1600 2597 60  0000 C CNN
+F 1 "2N7002DW-7-F" H 1600 2491 60  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering" H 1450 2450 60  0001 C CNN
+F 3 "" H 1450 2450 60  0001 C CNN
+	1    1450 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L CLRLibrary:6N7002 Q?
+U 2 1 5D07AF4D
+P 1450 2950
+AR Path="/5BA655A7/5D01C728/5D07AF4D" Ref="Q?"  Part="2" 
+AR Path="/5D01CD70/5D07AF4D" Ref="Q4"  Part="2" 
+AR Path="/5D08CCAD/5D07AF4D" Ref="Q?"  Part="2" 
+AR Path="/5D117FD0/5D07AF4D" Ref="Q?"  Part="2" 
+AR Path="/5D117FE1/5D07AF4D" Ref="Q96"  Part="2" 
+F 0 "Q96" H 1600 3097 60  0000 C CNN
+F 1 "2N7002DW-7-F" H 1600 2991 60  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering" H 1450 2950 60  0001 C CNN
+F 3 "" H 1450 2950 60  0001 C CNN
+	2    1450 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 1900 2050 1900
+Wire Wire Line
+	2100 1900 2100 2000
+Connection ~ 2100 1900
+Connection ~ 2100 2000
+Wire Wire Line
+	2100 2000 2100 2100
+Connection ~ 2100 2100
+Wire Wire Line
+	2100 2100 2100 2200
+Wire Wire Line
+	2100 2200 2100 2450
+Wire Wire Line
+	2100 2450 2750 2450
+Connection ~ 2100 2200
+Wire Wire Line
+	2100 2450 2100 2650
+Wire Wire Line
+	2100 2650 2750 2650
+Connection ~ 2100 2450
+Text Label 1450 1900 0    50   ~ 0
+SAMPWR
+Wire Wire Line
+	2500 2100 2600 2100
+Wire Wire Line
+	2600 2100 2600 2550
+Wire Wire Line
+	2600 2550 1950 2550
+Wire Wire Line
+	2500 3050 1950 3050
+Wire Wire Line
+	1950 2650 2000 2650
+Wire Wire Line
+	2000 2650 2000 3150
+Wire Wire Line
+	2000 3150 1950 3150
+Wire Wire Line
+	1250 2650 900  2650
+Text Label 1000 2650 0    50   ~ 0
+DRVD10
+Wire Wire Line
+	1250 3150 900  3150
+Text Label 1000 3150 0    50   ~ 0
+DRVD11
+$Comp
+L CLRLibrary:6N7002 Q?
+U 1 1 5D07AF50
+P 1300 950
+AR Path="/5BA655A7/5D01C728/5D07AF50" Ref="Q?"  Part="1" 
+AR Path="/5D01CD70/5D07AF50" Ref="Q2"  Part="1" 
+AR Path="/5D08CCAD/5D07AF50" Ref="Q?"  Part="1" 
+AR Path="/5D117FD0/5D07AF50" Ref="Q?"  Part="1" 
+AR Path="/5D117FE1/5D07AF50" Ref="Q95"  Part="1" 
+F 0 "Q95" H 1450 1097 60  0000 C CNN
+F 1 "2N7002DW-7-F" H 1450 991 60  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering" H 1300 950 60  0001 C CNN
+F 3 "" H 1300 950 60  0001 C CNN
+	1    1300 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L CLRLibrary:6N7002 Q?
+U 2 1 5D07AF5E
+P 1300 1450
+AR Path="/5BA655A7/5D01C728/5D07AF5E" Ref="Q?"  Part="2" 
+AR Path="/5D01CD70/5D07AF5E" Ref="Q2"  Part="2" 
+AR Path="/5D08CCAD/5D07AF5E" Ref="Q?"  Part="2" 
+AR Path="/5D117FD0/5D07AF5E" Ref="Q?"  Part="2" 
+AR Path="/5D117FE1/5D07AF5E" Ref="Q95"  Part="2" 
+F 0 "Q95" H 1450 1597 60  0000 C CNN
+F 1 "2N7002DW-7-F" H 1450 1491 60  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering" H 1300 1450 60  0001 C CNN
+F 3 "" H 1300 1450 60  0001 C CNN
+	2    1300 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 950  1950 1150
+Wire Wire Line
+	1950 1150 2050 1150
+Wire Wire Line
+	1800 1150 1850 1150
+Wire Wire Line
+	1850 1150 1850 1650
+Wire Wire Line
+	1850 1650 1800 1650
+$Comp
+L power:GND #PWR?
+U 1 1 5D0F654D
+P 1850 1650
+AR Path="/5CFC7757/5D0F654D" Ref="#PWR?"  Part="1" 
+AR Path="/5CFEE74D/5D0F654D" Ref="#PWR?"  Part="1" 
+AR Path="/5CE81FF5/5D0F654D" Ref="#PWR?"  Part="1" 
+AR Path="/5CE982AE/5D0F654D" Ref="#PWR?"  Part="1" 
+AR Path="/5BA655A7/5D01C728/5D0F654D" Ref="#PWR?"  Part="1" 
+AR Path="/5D01CD70/5D0F654D" Ref="#PWR048"  Part="1" 
+AR Path="/5D08CCAD/5D0F654D" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FD0/5D0F654D" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FE1/5D0F654D" Ref="#PWR0140"  Part="1" 
+F 0 "#PWR0140" H 1850 1400 50  0001 C CNN
+F 1 "GND" H 1850 1500 50  0000 C CNN
+F 2 "" H 1850 1650 50  0001 C CNN
+F 3 "" H 1850 1650 50  0001 C CNN
+	1    1850 1650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1100 1150 750  1150
+Text Label 850  1150 0    50   ~ 0
+DRVD08
+Wire Wire Line
+	1100 1650 750  1650
+Text Label 850  1650 0    50   ~ 0
+DRVD09
+Wire Wire Line
+	1800 1050 2500 1050
+$Comp
+L power:GND #PWR?
+U 1 1 5D07AF62
+P 2000 3150
+AR Path="/5CFC7757/5D07AF62" Ref="#PWR?"  Part="1" 
+AR Path="/5CFEE74D/5D07AF62" Ref="#PWR?"  Part="1" 
+AR Path="/5CE81FF5/5D07AF62" Ref="#PWR?"  Part="1" 
+AR Path="/5CE982AE/5D07AF62" Ref="#PWR?"  Part="1" 
+AR Path="/5BA655A7/5D01C728/5D07AF62" Ref="#PWR?"  Part="1" 
+AR Path="/5D01CD70/5D07AF62" Ref="#PWR050"  Part="1" 
+AR Path="/5D08CCAD/5D07AF62" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FD0/5D07AF62" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FE1/5D07AF62" Ref="#PWR0141"  Part="1" 
+F 0 "#PWR0141" H 2000 2900 50  0001 C CNN
+F 1 "GND" H 2000 3000 50  0000 C CNN
+F 2 "" H 2000 3150 50  0001 C CNN
+F 3 "" H 2000 3150 50  0001 C CNN
+	1    2000 3150
+	0    -1   -1   0   
+$EndComp
+Connection ~ 2000 3150
+Connection ~ 1850 1650
+Wire Wire Line
+	2500 1900 2500 1050
+Wire Wire Line
+	2500 2000 2600 2000
+Wire Wire Line
+	2600 2000 2600 1550
+Text Label 3350 950  0    50   ~ 0
+SAMD08
+Text Label 3350 1150 0    50   ~ 0
+SAMD09
+Text Label 3300 2450 0    50   ~ 0
+SAMD10
+Text Label 3300 2650 0    50   ~ 0
+SAMD11
+Wire Wire Line
+	2050 1900 2050 1150
+Connection ~ 2050 1900
+Wire Wire Line
+	2050 1900 2100 1900
+Connection ~ 2050 1150
+Wire Wire Line
+	4550 2500 4200 2500
+Text Label 4300 2500 0    50   ~ 0
+DRVD14
+Wire Wire Line
+	4550 3000 4200 3000
+Text Label 4300 3000 0    50   ~ 0
+DRVD15
+Wire Wire Line
+	4400 1000 4050 1000
+Text Label 4150 1000 0    50   ~ 0
+DRVD12
+Wire Wire Line
+	4400 1500 4050 1500
+Text Label 4150 1500 0    50   ~ 0
+DRVD13
+Wire Wire Line
+	6500 800  6900 800 
+Text Label 6650 800  0    50   ~ 0
+SAMD12
+Wire Wire Line
+	6500 900  6900 900 
+Wire Wire Line
+	6900 900  6900 800 
+Connection ~ 6900 800 
+Wire Wire Line
+	6900 800  7150 800 
+Wire Wire Line
+	6500 1000 6900 1000
+Text Label 6650 1000 0    50   ~ 0
+SAMD13
+Wire Wire Line
+	6500 1100 6900 1100
+Wire Wire Line
+	6900 1100 6900 1000
+Connection ~ 6900 1000
+Wire Wire Line
+	6900 1000 7150 1000
+Wire Wire Line
+	6450 2300 6850 2300
+Text Label 6600 2300 0    50   ~ 0
+SAMD14
+Wire Wire Line
+	6450 2400 6850 2400
+Wire Wire Line
+	6850 2400 6850 2300
+Connection ~ 6850 2300
+Wire Wire Line
+	6850 2300 7100 2300
+Wire Wire Line
+	6450 2500 6850 2500
+Text Label 6600 2500 0    50   ~ 0
+SAMD15
+Wire Wire Line
+	6450 2600 6850 2600
+Wire Wire Line
+	6850 2600 6850 2500
+Connection ~ 6850 2500
+Wire Wire Line
+	6850 2500 7100 2500
+$Comp
+L Connector:Conn_01x08_Male J?
+U 1 1 5D07AF54
+P 9650 1100
+AR Path="/5BA655A7/5D01C728/5D07AF54" Ref="J?"  Part="1" 
+AR Path="/5D01CD70/5D07AF54" Ref="J21"  Part="1" 
+AR Path="/5D08CCAD/5D07AF54" Ref="J?"  Part="1" 
+AR Path="/5D117FD0/5D07AF54" Ref="J?"  Part="1" 
+AR Path="/5D117FE1/5D07AF54" Ref="J26"  Part="1" 
+F 0 "J26" H 9623 1073 50  0000 R CNN
+F 1 "Conn_01x08_Male" H 9623 982 50  0000 R CNN
+F 2 "CLRLibraryParts:KK156-8" H 9650 1100 50  0001 C CNN
+F 3 "~" H 9650 1100 50  0001 C CNN
+	1    9650 1100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky_x2_ACom_KKA D?
+U 1 1 5D0F64DC
+P 8050 1100
+AR Path="/5BA655A7/5D01C728/5D0F64DC" Ref="D?"  Part="1" 
+AR Path="/5D01CD70/5D0F64DC" Ref="D1"  Part="1" 
+AR Path="/5D08CCAD/5D0F64DC" Ref="D?"  Part="1" 
+AR Path="/5D117FD0/5D0F64DC" Ref="D?"  Part="1" 
+AR Path="/5D117FE1/5D0F64DC" Ref="D25"  Part="1" 
+F 0 "D25" V 8004 1179 50  0000 L CNN
+F 1 "BAV23A/Q" V 8095 1179 50  0000 L CNN
+F 2 "SeeedOPL-Diode-2016:SOT-23" H 8050 1100 50  0001 C CNN
+F 3 "~" H 8050 1100 50  0001 C CNN
+	1    8050 1100
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:D_Schottky_x2_ACom_KKA D?
+U 1 1 5D0F64EA
+P 8350 1450
+AR Path="/5BA655A7/5D01C728/5D0F64EA" Ref="D?"  Part="1" 
+AR Path="/5D01CD70/5D0F64EA" Ref="D3"  Part="1" 
+AR Path="/5D08CCAD/5D0F64EA" Ref="D?"  Part="1" 
+AR Path="/5D117FD0/5D0F64EA" Ref="D?"  Part="1" 
+AR Path="/5D117FE1/5D0F64EA" Ref="D27"  Part="1" 
+F 0 "D27" V 8304 1529 50  0000 L CNN
+F 1 "BAV23A/Q" V 8395 1529 50  0000 L CNN
+F 2 "SeeedOPL-Diode-2016:SOT-23" H 8350 1450 50  0001 C CNN
+F 3 "~" H 8350 1450 50  0001 C CNN
+	1    8350 1450
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	8050 800  9450 800 
+Wire Wire Line
+	8050 1400 8150 1400
+Wire Wire Line
+	8150 1400 8150 900 
+Wire Wire Line
+	8150 900  9450 900 
+Wire Wire Line
+	8350 1000 8350 1150
+Wire Wire Line
+	8350 1000 9450 1000
+Wire Wire Line
+	8350 1750 8550 1750
+Wire Wire Line
+	8550 1750 8550 1100
+Wire Wire Line
+	8550 1100 9450 1100
+$Comp
+L Device:D_Schottky_x2_ACom_KKA D?
+U 1 1 5D0F64E1
+P 10500 1100
+AR Path="/5BA655A7/5D01C728/5D0F64E1" Ref="D?"  Part="1" 
+AR Path="/5D01CD70/5D0F64E1" Ref="D5"  Part="1" 
+AR Path="/5D08CCAD/5D0F64E1" Ref="D?"  Part="1" 
+AR Path="/5D117FD0/5D0F64E1" Ref="D?"  Part="1" 
+AR Path="/5D117FE1/5D0F64E1" Ref="D29"  Part="1" 
+F 0 "D29" V 10454 1179 50  0000 L CNN
+F 1 "BAV23A/Q" V 10545 1179 50  0000 L CNN
+F 2 "SeeedOPL-Diode-2016:SOT-23" H 10500 1100 50  0001 C CNN
+F 3 "~" H 10500 1100 50  0001 C CNN
+	1    10500 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D_Schottky_x2_ACom_KKA D?
+U 1 1 5D0F64E3
+P 10650 1500
+AR Path="/5BA655A7/5D01C728/5D0F64E3" Ref="D?"  Part="1" 
+AR Path="/5D01CD70/5D0F64E3" Ref="D7"  Part="1" 
+AR Path="/5D08CCAD/5D0F64E3" Ref="D?"  Part="1" 
+AR Path="/5D117FD0/5D0F64E3" Ref="D?"  Part="1" 
+AR Path="/5D117FE1/5D0F64E3" Ref="D31"  Part="1" 
+F 0 "D31" V 10604 1579 50  0000 L CNN
+F 1 "BAV23A/Q" V 10695 1579 50  0000 L CNN
+F 2 "SeeedOPL-Diode-2016:SOT-23" H 10650 1500 50  0001 C CNN
+F 3 "~" H 10650 1500 50  0001 C CNN
+	1    10650 1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10650 1800 9450 1800
+Wire Wire Line
+	9450 1800 9450 1500
+Wire Wire Line
+	10650 1200 11000 1200
+Wire Wire Line
+	11000 1200 11000 1850
+Wire Wire Line
+	11000 1850 9350 1850
+Wire Wire Line
+	9350 1850 9350 1400
+Wire Wire Line
+	9350 1400 9450 1400
+Wire Wire Line
+	10500 1400 10000 1400
+Wire Wire Line
+	10000 1400 10000 1300
+Wire Wire Line
+	10000 1300 9450 1300
+Wire Wire Line
+	10500 800  9950 800 
+Wire Wire Line
+	9950 800  9950 1200
+Wire Wire Line
+	9950 1200 9450 1200
+Wire Wire Line
+	9450 1200 8850 1200
+Connection ~ 9450 1200
+Wire Wire Line
+	9450 1300 8850 1300
+Connection ~ 9450 1300
+Wire Wire Line
+	9350 1400 8850 1400
+Connection ~ 9350 1400
+Wire Wire Line
+	9450 1500 8850 1500
+Connection ~ 9450 1500
+Text Label 8950 800  0    50   ~ 0
+SAMD00
+Text Label 9000 900  0    50   ~ 0
+SAMD01
+Text Label 8950 1000 0    50   ~ 0
+SAMD02
+Text Label 8950 1100 0    50   ~ 0
+SAMD03
+Text Label 8950 1200 0    50   ~ 0
+SAMD04
+Text Label 8950 1300 0    50   ~ 0
+SAMD05
+Text Label 8950 1400 0    50   ~ 0
+SAMD06
+Text Label 8950 1500 0    50   ~ 0
+SAMD07
+Wire Wire Line
+	7850 1100 7850 1450
+Wire Wire Line
+	7850 1450 8150 1450
+Wire Wire Line
+	10700 1100 10850 1100
+Wire Wire Line
+	10850 1100 10850 1500
+Connection ~ 10850 1500
+Wire Wire Line
+	10850 1500 10850 1600
+$Comp
+L power:GND #PWR?
+U 1 1 5D0F64F1
+P 7850 1450
+AR Path="/5CFC7757/5D0F64F1" Ref="#PWR?"  Part="1" 
+AR Path="/5CFEE74D/5D0F64F1" Ref="#PWR?"  Part="1" 
+AR Path="/5CE81FF5/5D0F64F1" Ref="#PWR?"  Part="1" 
+AR Path="/5CE982AE/5D0F64F1" Ref="#PWR?"  Part="1" 
+AR Path="/5BA655A7/5D01C728/5D0F64F1" Ref="#PWR?"  Part="1" 
+AR Path="/5D01CD70/5D0F64F1" Ref="#PWR055"  Part="1" 
+AR Path="/5D08CCAD/5D0F64F1" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FD0/5D0F64F1" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FE1/5D0F64F1" Ref="#PWR0142"  Part="1" 
+F 0 "#PWR0142" H 7850 1200 50  0001 C CNN
+F 1 "GND" H 7850 1300 50  0000 C CNN
+F 2 "" H 7850 1450 50  0001 C CNN
+F 3 "" H 7850 1450 50  0001 C CNN
+	1    7850 1450
+	1    0    0    -1  
+$EndComp
+Connection ~ 7850 1450
+$Comp
+L power:GND #PWR?
+U 1 1 5D0F64F4
+P 10850 1600
+AR Path="/5CFC7757/5D0F64F4" Ref="#PWR?"  Part="1" 
+AR Path="/5CFEE74D/5D0F64F4" Ref="#PWR?"  Part="1" 
+AR Path="/5CE81FF5/5D0F64F4" Ref="#PWR?"  Part="1" 
+AR Path="/5CE982AE/5D0F64F4" Ref="#PWR?"  Part="1" 
+AR Path="/5BA655A7/5D01C728/5D0F64F4" Ref="#PWR?"  Part="1" 
+AR Path="/5D01CD70/5D0F64F4" Ref="#PWR060"  Part="1" 
+AR Path="/5D08CCAD/5D0F64F4" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FD0/5D0F64F4" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FE1/5D0F64F4" Ref="#PWR0143"  Part="1" 
+F 0 "#PWR0143" H 10850 1350 50  0001 C CNN
+F 1 "GND" H 10850 1450 50  0000 C CNN
+F 2 "" H 10850 1600 50  0001 C CNN
+F 3 "" H 10850 1600 50  0001 C CNN
+	1    10850 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x08_Male J?
+U 1 1 5D07AF09
+P 9650 2350
+AR Path="/5BA655A7/5D01C728/5D07AF09" Ref="J?"  Part="1" 
+AR Path="/5D01CD70/5D07AF09" Ref="J22"  Part="1" 
+AR Path="/5D08CCAD/5D07AF09" Ref="J?"  Part="1" 
+AR Path="/5D117FD0/5D07AF09" Ref="J?"  Part="1" 
+AR Path="/5D117FE1/5D07AF09" Ref="J27"  Part="1" 
+F 0 "J27" H 9623 2323 50  0000 R CNN
+F 1 "Conn_01x08_Male" H 9623 2232 50  0000 R CNN
+F 2 "CLRLibraryParts:KK156-8" H 9650 2350 50  0001 C CNN
+F 3 "~" H 9650 2350 50  0001 C CNN
+	1    9650 2350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky_x2_ACom_KKA D?
+U 1 1 5D07AF0C
+P 8050 2350
+AR Path="/5BA655A7/5D01C728/5D07AF0C" Ref="D?"  Part="1" 
+AR Path="/5D01CD70/5D07AF0C" Ref="D2"  Part="1" 
+AR Path="/5D08CCAD/5D07AF0C" Ref="D?"  Part="1" 
+AR Path="/5D117FD0/5D07AF0C" Ref="D?"  Part="1" 
+AR Path="/5D117FE1/5D07AF0C" Ref="D26"  Part="1" 
+F 0 "D26" V 8004 2429 50  0000 L CNN
+F 1 "BAV23A/Q" V 8095 2429 50  0000 L CNN
+F 2 "SeeedOPL-Diode-2016:SOT-23" H 8050 2350 50  0001 C CNN
+F 3 "~" H 8050 2350 50  0001 C CNN
+	1    8050 2350
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:D_Schottky_x2_ACom_KKA D?
+U 1 1 5D0F64FF
+P 8350 2700
+AR Path="/5BA655A7/5D01C728/5D0F64FF" Ref="D?"  Part="1" 
+AR Path="/5D01CD70/5D0F64FF" Ref="D4"  Part="1" 
+AR Path="/5D08CCAD/5D0F64FF" Ref="D?"  Part="1" 
+AR Path="/5D117FD0/5D0F64FF" Ref="D?"  Part="1" 
+AR Path="/5D117FE1/5D0F64FF" Ref="D28"  Part="1" 
+F 0 "D28" V 8304 2779 50  0000 L CNN
+F 1 "BAV23A/Q" V 8395 2779 50  0000 L CNN
+F 2 "SeeedOPL-Diode-2016:SOT-23" H 8350 2700 50  0001 C CNN
+F 3 "~" H 8350 2700 50  0001 C CNN
+	1    8350 2700
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	8050 2050 9450 2050
+Wire Wire Line
+	8050 2650 8150 2650
+Wire Wire Line
+	8150 2650 8150 2150
+Wire Wire Line
+	8150 2150 9450 2150
+Wire Wire Line
+	8350 2250 8350 2400
+Wire Wire Line
+	8350 2250 9450 2250
+Wire Wire Line
+	8350 3000 8550 3000
+Wire Wire Line
+	8550 3000 8550 2350
+Wire Wire Line
+	8550 2350 9450 2350
+$Comp
+L Device:D_Schottky_x2_ACom_KKA D?
+U 1 1 5D0F6500
+P 10500 2350
+AR Path="/5BA655A7/5D01C728/5D0F6500" Ref="D?"  Part="1" 
+AR Path="/5D01CD70/5D0F6500" Ref="D6"  Part="1" 
+AR Path="/5D08CCAD/5D0F6500" Ref="D?"  Part="1" 
+AR Path="/5D117FD0/5D0F6500" Ref="D?"  Part="1" 
+AR Path="/5D117FE1/5D0F6500" Ref="D30"  Part="1" 
+F 0 "D30" V 10454 2429 50  0000 L CNN
+F 1 "BAV23A/Q" V 10545 2429 50  0000 L CNN
+F 2 "SeeedOPL-Diode-2016:SOT-23" H 10500 2350 50  0001 C CNN
+F 3 "~" H 10500 2350 50  0001 C CNN
+	1    10500 2350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D_Schottky_x2_ACom_KKA D?
+U 1 1 5D07AF3E
+P 10650 2750
+AR Path="/5BA655A7/5D01C728/5D07AF3E" Ref="D?"  Part="1" 
+AR Path="/5D01CD70/5D07AF3E" Ref="D8"  Part="1" 
+AR Path="/5D08CCAD/5D07AF3E" Ref="D?"  Part="1" 
+AR Path="/5D117FD0/5D07AF3E" Ref="D?"  Part="1" 
+AR Path="/5D117FE1/5D07AF3E" Ref="D32"  Part="1" 
+F 0 "D32" V 10604 2829 50  0000 L CNN
+F 1 "BAV23A/Q" V 10695 2829 50  0000 L CNN
+F 2 "SeeedOPL-Diode-2016:SOT-23" H 10650 2750 50  0001 C CNN
+F 3 "~" H 10650 2750 50  0001 C CNN
+	1    10650 2750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10650 3050 9450 3050
+Wire Wire Line
+	9450 3050 9450 2750
+Wire Wire Line
+	10650 2450 11000 2450
+Wire Wire Line
+	11000 2450 11000 3100
+Wire Wire Line
+	11000 3100 9350 3100
+Wire Wire Line
+	9350 3100 9350 2650
+Wire Wire Line
+	9350 2650 9450 2650
+Wire Wire Line
+	10500 2650 10000 2650
+Wire Wire Line
+	10000 2650 10000 2550
+Wire Wire Line
+	10000 2550 9450 2550
+Wire Wire Line
+	10500 2050 9950 2050
+Wire Wire Line
+	9950 2050 9950 2450
+Wire Wire Line
+	9950 2450 9450 2450
+Wire Wire Line
+	9450 2450 8850 2450
+Connection ~ 9450 2450
+Wire Wire Line
+	9450 2550 8850 2550
+Connection ~ 9450 2550
+Wire Wire Line
+	9350 2650 8850 2650
+Connection ~ 9350 2650
+Wire Wire Line
+	9450 2750 8850 2750
+Connection ~ 9450 2750
+Text Label 8950 2050 0    50   ~ 0
+SAMD08
+Text Label 9000 2150 0    50   ~ 0
+SAMD09
+Text Label 8950 2250 0    50   ~ 0
+SAMD10
+Text Label 8950 2350 0    50   ~ 0
+SAMD11
+Text Label 8950 2450 0    50   ~ 0
+SAMD12
+Text Label 8950 2550 0    50   ~ 0
+SAMD13
+Text Label 8950 2650 0    50   ~ 0
+SAMD14
+Text Label 8950 2750 0    50   ~ 0
+SAMD15
+Wire Wire Line
+	7850 2350 7850 2700
+Wire Wire Line
+	7850 2700 8150 2700
+Wire Wire Line
+	10700 2350 10850 2350
+Wire Wire Line
+	10850 2350 10850 2750
+Connection ~ 10850 2750
+Wire Wire Line
+	10850 2750 10850 2850
+$Comp
+L power:GND #PWR?
+U 1 1 5D07AF3F
+P 7850 2700
+AR Path="/5CFC7757/5D07AF3F" Ref="#PWR?"  Part="1" 
+AR Path="/5CFEE74D/5D07AF3F" Ref="#PWR?"  Part="1" 
+AR Path="/5CE81FF5/5D07AF3F" Ref="#PWR?"  Part="1" 
+AR Path="/5CE982AE/5D07AF3F" Ref="#PWR?"  Part="1" 
+AR Path="/5BA655A7/5D01C728/5D07AF3F" Ref="#PWR?"  Part="1" 
+AR Path="/5D01CD70/5D07AF3F" Ref="#PWR056"  Part="1" 
+AR Path="/5D08CCAD/5D07AF3F" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FD0/5D07AF3F" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FE1/5D07AF3F" Ref="#PWR0144"  Part="1" 
+F 0 "#PWR0144" H 7850 2450 50  0001 C CNN
+F 1 "GND" H 7850 2550 50  0000 C CNN
+F 2 "" H 7850 2700 50  0001 C CNN
+F 3 "" H 7850 2700 50  0001 C CNN
+	1    7850 2700
+	1    0    0    -1  
+$EndComp
+Connection ~ 7850 2700
+$Comp
+L power:GND #PWR?
+U 1 1 5D07AF43
+P 10850 2850
+AR Path="/5CFC7757/5D07AF43" Ref="#PWR?"  Part="1" 
+AR Path="/5CFEE74D/5D07AF43" Ref="#PWR?"  Part="1" 
+AR Path="/5CE81FF5/5D07AF43" Ref="#PWR?"  Part="1" 
+AR Path="/5CE982AE/5D07AF43" Ref="#PWR?"  Part="1" 
+AR Path="/5BA655A7/5D01C728/5D07AF43" Ref="#PWR?"  Part="1" 
+AR Path="/5D01CD70/5D07AF43" Ref="#PWR061"  Part="1" 
+AR Path="/5D08CCAD/5D07AF43" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FD0/5D07AF43" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FE1/5D07AF43" Ref="#PWR0145"  Part="1" 
+F 0 "#PWR0145" H 10850 2600 50  0001 C CNN
+F 1 "GND" H 10850 2700 50  0000 C CNN
+F 2 "" H 10850 2850 50  0001 C CNN
+F 3 "" H 10850 2850 50  0001 C CNN
+	1    10850 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 5250 9500 5250
+Wire Wire Line
+	10100 5350 9500 5350
+Wire Wire Line
+	10100 5550 9500 5550
+Text Label 9600 5250 0    50   ~ 0
+SAMD04
+Text Label 9600 5350 0    50   ~ 0
+SAMD05
+Text Label 9600 5450 0    50   ~ 0
+SAMD06
+Text Label 9600 5550 0    50   ~ 0
+SAMD07
+Wire Wire Line
+	9500 5450 10100 5450
+Wire Wire Line
+	8700 4850 10100 4850
+Wire Wire Line
+	8800 4950 10100 4950
+Wire Wire Line
+	9000 5050 10100 5050
+Wire Wire Line
+	9200 5150 10100 5150
+Text Label 9600 4850 0    50   ~ 0
+SAMD00
+Text Label 9650 4950 0    50   ~ 0
+SAMD01
+Text Label 9600 5050 0    50   ~ 0
+SAMD02
+Text Label 9600 5150 0    50   ~ 0
+SAMD03
+Wire Wire Line
+	8700 5650 10100 5650
+Wire Wire Line
+	8800 5750 10100 5750
+Wire Wire Line
+	9000 5850 10100 5850
+Wire Wire Line
+	9200 5950 10100 5950
+Wire Wire Line
+	10100 6050 9500 6050
+Wire Wire Line
+	10100 6150 9500 6150
+Wire Wire Line
+	10100 6350 9500 6350
+Text Label 9600 5650 0    50   ~ 0
+SAMD08
+Text Label 9650 5750 0    50   ~ 0
+SAMD09
+Text Label 9600 5850 0    50   ~ 0
+SAMD10
+Text Label 9600 5950 0    50   ~ 0
+SAMD11
+Text Label 9600 6050 0    50   ~ 0
+SAMD12
+Text Label 9600 6150 0    50   ~ 0
+SAMD13
+Text Label 9600 6250 0    50   ~ 0
+SAMD14
+Text Label 9600 6350 0    50   ~ 0
+SAMD15
+Wire Wire Line
+	9500 6250 10100 6250
+Text GLabel 9650 4350 0    50   Input ~ 0
+SAMD[0..15]
+Entry Wire Line
+	10100 4850 10200 4950
+Entry Wire Line
+	10100 4950 10200 5050
+Entry Wire Line
+	10100 5050 10200 5150
+Entry Wire Line
+	10100 5150 10200 5250
+Entry Wire Line
+	10100 5250 10200 5350
+Entry Wire Line
+	10100 5350 10200 5450
+Entry Wire Line
+	10100 5450 10200 5550
+Entry Wire Line
+	10100 5550 10200 5650
+Entry Wire Line
+	10100 5650 10200 5750
+Entry Wire Line
+	10100 5750 10200 5850
+Entry Wire Line
+	10100 5850 10200 5950
+Entry Wire Line
+	10100 5950 10200 6050
+Entry Wire Line
+	10100 6050 10200 6150
+Entry Wire Line
+	10100 6150 10200 6250
+Entry Wire Line
+	10100 6250 10200 6350
+Entry Wire Line
+	10100 6350 10200 6450
+Wire Bus Line
+	10200 4350 9650 4350
+$Comp
+L SerialIOProc-rescue:SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_-OPL_Discrete_Semiconductor Q81
+U 1 1 5D07AF06
+P 3000 950
+F 0 "Q81" V 3050 800 45  0000 C CNN
+F 1 "SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_" V 3241 950 45  0001 C CNN
+F 2 "OPL_Discrete_Semiconductor:SOT-23" H 3000 950 50  0001 C CNN
+F 3 "" H 3000 950 50  0001 C CNN
+F 4 "NCE3407A" V 3050 1100 20  0000 C CNN "MPN"
+F 5 "305030010" H 3030 1100 20  0001 C CNN "SKU"
+	1    3000 950 
+	0    1    1    0   
+$EndComp
+$Comp
+L SerialIOProc-rescue:SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_-OPL_Discrete_Semiconductor Q82
+U 1 1 5D07AF10
+P 3000 1150
+F 0 "Q82" V 3050 1000 45  0000 C CNN
+F 1 "SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_" V 3241 1150 45  0001 C CNN
+F 2 "OPL_Discrete_Semiconductor:SOT-23" H 3000 1150 50  0001 C CNN
+F 3 "" H 3000 1150 50  0001 C CNN
+F 4 "NCE3407A" V 3050 1300 20  0000 C CNN "MPN"
+F 5 "305030010" H 3030 1300 20  0001 C CNN "SKU"
+	1    3000 1150
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	1800 1550 2600 1550
+Wire Wire Line
+	2500 1050 2500 750 
+Wire Wire Line
+	2500 750  3000 750 
+Connection ~ 2500 1050
+Wire Wire Line
+	2600 1550 3000 1550
+Wire Wire Line
+	3000 1550 3000 1350
+Connection ~ 2600 1550
+Wire Wire Line
+	3200 1150 3850 1150
+Wire Wire Line
+	3200 950  3850 950 
+Wire Wire Line
+	1950 950  2800 950 
+Wire Wire Line
+	2050 1150 2800 1150
+$Comp
+L SerialIOProc-rescue:SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_-OPL_Discrete_Semiconductor Q77
+U 1 1 5D07AF57
+P 2950 2450
+F 0 "Q77" V 3000 2300 45  0000 C CNN
+F 1 "SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_" V 3191 2450 45  0001 C CNN
+F 2 "OPL_Discrete_Semiconductor:SOT-23" H 2950 2450 50  0001 C CNN
+F 3 "" H 2950 2450 50  0001 C CNN
+F 4 "NCE3407A" V 3000 2600 20  0000 C CNN "MPN"
+F 5 "305030010" H 2980 2600 20  0001 C CNN "SKU"
+	1    2950 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L SerialIOProc-rescue:SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_-OPL_Discrete_Semiconductor Q78
+U 1 1 5D07AF5A
+P 2950 2650
+F 0 "Q78" V 3000 2500 45  0000 C CNN
+F 1 "SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_" V 3191 2650 45  0001 C CNN
+F 2 "OPL_Discrete_Semiconductor:SOT-23" H 2950 2650 50  0001 C CNN
+F 3 "" H 2950 2650 50  0001 C CNN
+F 4 "NCE3407A" V 3000 2800 20  0000 C CNN "MPN"
+F 5 "305030010" H 2980 2800 20  0001 C CNN "SKU"
+	1    2950 2650
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	2600 2100 2950 2100
+Wire Wire Line
+	2950 2100 2950 2250
+Connection ~ 2600 2100
+Wire Wire Line
+	2500 2200 2500 3050
+Wire Wire Line
+	3150 2650 3800 2650
+Wire Wire Line
+	3150 2450 3800 2450
+Wire Wire Line
+	2950 2850 2950 3050
+Wire Wire Line
+	2950 3050 2500 3050
+Connection ~ 2500 3050
+$Comp
+L Device:R_Pack04 RN?
+U 1 1 5D07AF63
+P 5600 1950
+AR Path="/5CFC7757/5D07AF63" Ref="RN?"  Part="1" 
+AR Path="/5CFEE74D/5D07AF63" Ref="RN?"  Part="1" 
+AR Path="/5CE81FF5/5D07AF63" Ref="RN?"  Part="1" 
+AR Path="/5CE982AE/5D07AF63" Ref="RN?"  Part="1" 
+AR Path="/5BA655A7/5D01C728/5D07AF63" Ref="RN?"  Part="1" 
+AR Path="/5D01CD70/5D07AF63" Ref="RN?"  Part="1" 
+AR Path="/5D08CCAD/5D07AF63" Ref="RN?"  Part="1" 
+AR Path="/5D117FD0/5D07AF63" Ref="RN?"  Part="1" 
+AR Path="/5D117FE1/5D07AF63" Ref="RN47"  Part="1" 
+F 0 "RN47" V 5300 1950 50  0000 C CNN
+F 1 "R_Pack04" V 5800 1950 50  0000 C CNN
+F 2 "CLRConnector:2012-8" V 5875 1950 50  0001 C CNN
+F 3 "" H 5600 1950 50  0001 C CNN
+	1    5600 1950
+	0    -1   1    0   
+$EndComp
+$Comp
+L CLRLibrary:6N7002 Q?
+U 1 1 5D07AF66
+P 4750 2300
+AR Path="/5BA655A7/5D01C728/5D07AF66" Ref="Q?"  Part="1" 
+AR Path="/5D01CD70/5D07AF66" Ref="Q?"  Part="1" 
+AR Path="/5D08CCAD/5D07AF66" Ref="Q?"  Part="1" 
+AR Path="/5D117FD0/5D07AF66" Ref="Q?"  Part="1" 
+AR Path="/5D117FE1/5D07AF66" Ref="Q86"  Part="1" 
+F 0 "Q86" H 4900 2447 60  0000 C CNN
+F 1 "2N7002DW-7-F" H 4900 2341 60  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering" H 4750 2300 60  0001 C CNN
+F 3 "" H 4750 2300 60  0001 C CNN
+	1    4750 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L CLRLibrary:6N7002 Q?
+U 2 1 5D07AF6A
+P 4750 2800
+AR Path="/5BA655A7/5D01C728/5D07AF6A" Ref="Q?"  Part="2" 
+AR Path="/5D01CD70/5D07AF6A" Ref="Q?"  Part="2" 
+AR Path="/5D08CCAD/5D07AF6A" Ref="Q?"  Part="2" 
+AR Path="/5D117FD0/5D07AF6A" Ref="Q?"  Part="2" 
+AR Path="/5D117FE1/5D07AF6A" Ref="Q86"  Part="2" 
+F 0 "Q86" H 4900 2947 60  0000 C CNN
+F 1 "2N7002DW-7-F" H 4900 2841 60  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering" H 4750 2800 60  0001 C CNN
+F 3 "" H 4750 2800 60  0001 C CNN
+	2    4750 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 1750 5350 1750
+Wire Wire Line
+	5400 1750 5400 1850
+Connection ~ 5400 1750
+Connection ~ 5400 1850
+Wire Wire Line
+	5400 1850 5400 1950
+Connection ~ 5400 1950
+Wire Wire Line
+	5400 1950 5400 2050
+Wire Wire Line
+	5400 2050 5400 2300
+Wire Wire Line
+	5400 2300 6050 2300
+Connection ~ 5400 2050
+Wire Wire Line
+	5400 2300 5400 2500
+Wire Wire Line
+	5400 2500 6050 2500
+Connection ~ 5400 2300
+Text Label 4750 1750 0    50   ~ 0
+SAMPWR
+Wire Wire Line
+	5800 1950 5900 1950
+Wire Wire Line
+	5900 1950 5900 2400
+Wire Wire Line
+	5900 2400 5250 2400
+Wire Wire Line
+	5800 2900 5250 2900
+Wire Wire Line
+	5250 2500 5300 2500
+Wire Wire Line
+	5300 2500 5300 3000
+Wire Wire Line
+	5300 3000 5250 3000
+$Comp
+L CLRLibrary:6N7002 Q?
+U 1 1 5D07AF6D
+P 4600 800
+AR Path="/5BA655A7/5D01C728/5D07AF6D" Ref="Q?"  Part="1" 
+AR Path="/5D01CD70/5D07AF6D" Ref="Q?"  Part="1" 
+AR Path="/5D08CCAD/5D07AF6D" Ref="Q?"  Part="1" 
+AR Path="/5D117FD0/5D07AF6D" Ref="Q?"  Part="1" 
+AR Path="/5D117FE1/5D07AF6D" Ref="Q84"  Part="1" 
+F 0 "Q84" H 4750 947 60  0000 C CNN
+F 1 "2N7002DW-7-F" H 4750 841 60  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering" H 4600 800 60  0001 C CNN
+F 3 "" H 4600 800 60  0001 C CNN
+	1    4600 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L CLRLibrary:6N7002 Q?
+U 2 1 5D07AF70
+P 4600 1300
+AR Path="/5BA655A7/5D01C728/5D07AF70" Ref="Q?"  Part="2" 
+AR Path="/5D01CD70/5D07AF70" Ref="Q?"  Part="2" 
+AR Path="/5D08CCAD/5D07AF70" Ref="Q?"  Part="2" 
+AR Path="/5D117FD0/5D07AF70" Ref="Q?"  Part="2" 
+AR Path="/5D117FE1/5D07AF70" Ref="Q84"  Part="2" 
+F 0 "Q84" H 4750 1447 60  0000 C CNN
+F 1 "2N7002DW-7-F" H 4750 1341 60  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering" H 4600 1300 60  0001 C CNN
+F 3 "" H 4600 1300 60  0001 C CNN
+	2    4600 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 800  5250 1000
+Wire Wire Line
+	5250 1000 5350 1000
+Wire Wire Line
+	5100 1000 5150 1000
+Wire Wire Line
+	5150 1000 5150 1500
+Wire Wire Line
+	5150 1500 5100 1500
+$Comp
+L power:GND #PWR?
+U 1 1 5D07AF73
+P 5150 1500
+AR Path="/5CFC7757/5D07AF73" Ref="#PWR?"  Part="1" 
+AR Path="/5CFEE74D/5D07AF73" Ref="#PWR?"  Part="1" 
+AR Path="/5CE81FF5/5D07AF73" Ref="#PWR?"  Part="1" 
+AR Path="/5CE982AE/5D07AF73" Ref="#PWR?"  Part="1" 
+AR Path="/5BA655A7/5D01C728/5D07AF73" Ref="#PWR?"  Part="1" 
+AR Path="/5D01CD70/5D07AF73" Ref="#PWR?"  Part="1" 
+AR Path="/5D08CCAD/5D07AF73" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FD0/5D07AF73" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FE1/5D07AF73" Ref="#PWR0146"  Part="1" 
+F 0 "#PWR0146" H 5150 1250 50  0001 C CNN
+F 1 "GND" H 5150 1350 50  0000 C CNN
+F 2 "" H 5150 1500 50  0001 C CNN
+F 3 "" H 5150 1500 50  0001 C CNN
+	1    5150 1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5100 900  5800 900 
+$Comp
+L power:GND #PWR?
+U 1 1 5D07AF76
+P 5300 3000
+AR Path="/5CFC7757/5D07AF76" Ref="#PWR?"  Part="1" 
+AR Path="/5CFEE74D/5D07AF76" Ref="#PWR?"  Part="1" 
+AR Path="/5CE81FF5/5D07AF76" Ref="#PWR?"  Part="1" 
+AR Path="/5CE982AE/5D07AF76" Ref="#PWR?"  Part="1" 
+AR Path="/5BA655A7/5D01C728/5D07AF76" Ref="#PWR?"  Part="1" 
+AR Path="/5D01CD70/5D07AF76" Ref="#PWR?"  Part="1" 
+AR Path="/5D08CCAD/5D07AF76" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FD0/5D07AF76" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FE1/5D07AF76" Ref="#PWR0147"  Part="1" 
+F 0 "#PWR0147" H 5300 2750 50  0001 C CNN
+F 1 "GND" H 5300 2850 50  0000 C CNN
+F 2 "" H 5300 3000 50  0001 C CNN
+F 3 "" H 5300 3000 50  0001 C CNN
+	1    5300 3000
+	0    -1   -1   0   
+$EndComp
+Connection ~ 5300 3000
+Connection ~ 5150 1500
+Wire Wire Line
+	5800 1750 5800 900 
+Wire Wire Line
+	5800 1850 5900 1850
+Wire Wire Line
+	5900 1850 5900 1400
+Wire Wire Line
+	5350 1750 5350 1000
+Connection ~ 5350 1750
+Wire Wire Line
+	5350 1750 5400 1750
+Connection ~ 5350 1000
+$Comp
+L SerialIOProc-rescue:SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_-OPL_Discrete_Semiconductor Q93
+U 1 1 5D07AF78
+P 6300 800
+F 0 "Q93" V 6350 650 45  0000 C CNN
+F 1 "SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_" V 6541 800 45  0001 C CNN
+F 2 "OPL_Discrete_Semiconductor:SOT-23" H 6300 800 50  0001 C CNN
+F 3 "" H 6300 800 50  0001 C CNN
+F 4 "NCE3407A" V 6350 950 20  0000 C CNN "MPN"
+F 5 "305030010" H 6330 950 20  0001 C CNN "SKU"
+	1    6300 800 
+	0    1    1    0   
+$EndComp
+$Comp
+L SerialIOProc-rescue:SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_-OPL_Discrete_Semiconductor Q94
+U 1 1 5D07AF7C
+P 6300 1000
+F 0 "Q94" V 6350 850 45  0000 C CNN
+F 1 "SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_" V 6541 1000 45  0001 C CNN
+F 2 "OPL_Discrete_Semiconductor:SOT-23" H 6300 1000 50  0001 C CNN
+F 3 "" H 6300 1000 50  0001 C CNN
+F 4 "NCE3407A" V 6350 1150 20  0000 C CNN "MPN"
+F 5 "305030010" H 6330 1150 20  0001 C CNN "SKU"
+	1    6300 1000
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	5100 1400 5900 1400
+Wire Wire Line
+	5800 900  5800 600 
+Wire Wire Line
+	5800 600  6300 600 
+Connection ~ 5800 900 
+Wire Wire Line
+	5900 1400 6300 1400
+Connection ~ 5900 1400
+Wire Wire Line
+	5250 800  6100 800 
+Wire Wire Line
+	5350 1000 6100 1000
+$Comp
+L SerialIOProc-rescue:SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_-OPL_Discrete_Semiconductor Q89
+U 1 1 5D07AF80
+P 6250 2300
+F 0 "Q89" V 6300 2150 45  0000 C CNN
+F 1 "SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_" V 6491 2300 45  0001 C CNN
+F 2 "OPL_Discrete_Semiconductor:SOT-23" H 6250 2300 50  0001 C CNN
+F 3 "" H 6250 2300 50  0001 C CNN
+F 4 "NCE3407A" V 6300 2450 20  0000 C CNN "MPN"
+F 5 "305030010" H 6280 2450 20  0001 C CNN "SKU"
+	1    6250 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L SerialIOProc-rescue:SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_-OPL_Discrete_Semiconductor Q90
+U 1 1 5D07AF81
+P 6250 2500
+F 0 "Q90" V 6300 2350 45  0000 C CNN
+F 1 "SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_" V 6491 2500 45  0001 C CNN
+F 2 "OPL_Discrete_Semiconductor:SOT-23" H 6250 2500 50  0001 C CNN
+F 3 "" H 6250 2500 50  0001 C CNN
+F 4 "NCE3407A" V 6300 2650 20  0000 C CNN "MPN"
+F 5 "305030010" H 6280 2650 20  0001 C CNN "SKU"
+	1    6250 2500
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	5900 1950 6250 1950
+Wire Wire Line
+	6250 1950 6250 2100
+Connection ~ 5900 1950
+Wire Wire Line
+	5800 2050 5800 2900
+Wire Wire Line
+	6250 2700 6250 2900
+Wire Wire Line
+	6250 2900 5800 2900
+Connection ~ 5800 2900
+$Comp
+L Device:R_Pack04 RN?
+U 1 1 5D26D7EA
+P 2250 6550
+AR Path="/5CFC7757/5D26D7EA" Ref="RN?"  Part="1" 
+AR Path="/5CFEE74D/5D26D7EA" Ref="RN?"  Part="1" 
+AR Path="/5CE81FF5/5D26D7EA" Ref="RN?"  Part="1" 
+AR Path="/5CE982AE/5D26D7EA" Ref="RN?"  Part="1" 
+AR Path="/5BA655A7/5D01C728/5D26D7EA" Ref="RN?"  Part="1" 
+AR Path="/5D01CD70/5D26D7EA" Ref="RN?"  Part="1" 
+AR Path="/5D08CCAD/5D26D7EA" Ref="RN?"  Part="1" 
+AR Path="/5D117FD0/5D26D7EA" Ref="RN?"  Part="1" 
+AR Path="/5D117FE1/5D26D7EA" Ref="RN45"  Part="1" 
+F 0 "RN45" V 1950 6550 50  0000 C CNN
+F 1 "R_Pack04" V 2450 6550 50  0000 C CNN
+F 2 "CLRConnector:2012-8" V 2525 6550 50  0001 C CNN
+F 3 "" H 2250 6550 50  0001 C CNN
+	1    2250 6550
+	0    -1   1    0   
+$EndComp
+$Comp
+L CLRLibrary:6N7002 Q?
+U 1 1 5D26D7F0
+P 1400 6900
+AR Path="/5BA655A7/5D01C728/5D26D7F0" Ref="Q?"  Part="1" 
+AR Path="/5D01CD70/5D26D7F0" Ref="Q?"  Part="1" 
+AR Path="/5D08CCAD/5D26D7F0" Ref="Q?"  Part="1" 
+AR Path="/5D117FD0/5D26D7F0" Ref="Q?"  Part="1" 
+AR Path="/5D117FE1/5D26D7F0" Ref="Q74"  Part="1" 
+F 0 "Q74" H 1550 7047 60  0000 C CNN
+F 1 "2N7002DW-7-F" H 1550 6941 60  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering" H 1400 6900 60  0001 C CNN
+F 3 "" H 1400 6900 60  0001 C CNN
+	1    1400 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L CLRLibrary:6N7002 Q?
+U 2 1 5D26D7F6
+P 1400 7400
+AR Path="/5BA655A7/5D01C728/5D26D7F6" Ref="Q?"  Part="2" 
+AR Path="/5D01CD70/5D26D7F6" Ref="Q?"  Part="2" 
+AR Path="/5D08CCAD/5D26D7F6" Ref="Q?"  Part="2" 
+AR Path="/5D117FD0/5D26D7F6" Ref="Q?"  Part="2" 
+AR Path="/5D117FE1/5D26D7F6" Ref="Q74"  Part="2" 
+F 0 "Q74" H 1550 7547 60  0000 C CNN
+F 1 "2N7002DW-7-F" H 1550 7441 60  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering" H 1400 7400 60  0001 C CNN
+F 3 "" H 1400 7400 60  0001 C CNN
+	2    1400 7400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 6350 2000 6350
+Wire Wire Line
+	2050 6350 2050 6450
+Connection ~ 2050 6350
+Connection ~ 2050 6450
+Wire Wire Line
+	2050 6450 2050 6550
+Connection ~ 2050 6550
+Wire Wire Line
+	2050 6550 2050 6650
+Wire Wire Line
+	2050 6650 2050 6900
+Wire Wire Line
+	2050 6900 2700 6900
+Connection ~ 2050 6650
+Wire Wire Line
+	2050 6900 2050 7100
+Wire Wire Line
+	2050 7100 2700 7100
+Connection ~ 2050 6900
+Text Label 1400 6350 0    50   ~ 0
+SAMPWR
+Wire Wire Line
+	2450 6550 2550 6550
+Wire Wire Line
+	2550 6550 2550 7000
+Wire Wire Line
+	2550 7000 1900 7000
+Wire Wire Line
+	2450 7500 1900 7500
+Wire Wire Line
+	1900 7100 1950 7100
+Wire Wire Line
+	1950 7100 1950 7600
+Wire Wire Line
+	1950 7600 1900 7600
+$Comp
+L CLRLibrary:6N7002 Q?
+U 1 1 5D07AF8D
+P 1250 5400
+AR Path="/5BA655A7/5D01C728/5D07AF8D" Ref="Q?"  Part="1" 
+AR Path="/5D01CD70/5D07AF8D" Ref="Q?"  Part="1" 
+AR Path="/5D08CCAD/5D07AF8D" Ref="Q?"  Part="1" 
+AR Path="/5D117FD0/5D07AF8D" Ref="Q?"  Part="1" 
+AR Path="/5D117FE1/5D07AF8D" Ref="Q73"  Part="1" 
+F 0 "Q73" H 1400 5547 60  0000 C CNN
+F 1 "2N7002DW-7-F" H 1400 5441 60  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering" H 1250 5400 60  0001 C CNN
+F 3 "" H 1250 5400 60  0001 C CNN
+	1    1250 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L CLRLibrary:6N7002 Q?
+U 2 1 5D07AF90
+P 1250 5900
+AR Path="/5BA655A7/5D01C728/5D07AF90" Ref="Q?"  Part="2" 
+AR Path="/5D01CD70/5D07AF90" Ref="Q?"  Part="2" 
+AR Path="/5D08CCAD/5D07AF90" Ref="Q?"  Part="2" 
+AR Path="/5D117FD0/5D07AF90" Ref="Q?"  Part="2" 
+AR Path="/5D117FE1/5D07AF90" Ref="Q73"  Part="2" 
+F 0 "Q73" H 1400 6047 60  0000 C CNN
+F 1 "2N7002DW-7-F" H 1400 5941 60  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering" H 1250 5900 60  0001 C CNN
+F 3 "" H 1250 5900 60  0001 C CNN
+	2    1250 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 5400 1900 5600
+Wire Wire Line
+	1900 5600 2000 5600
+Wire Wire Line
+	1750 5600 1800 5600
+Wire Wire Line
+	1800 5600 1800 6100
+Wire Wire Line
+	1800 6100 1750 6100
+$Comp
+L power:GND #PWR?
+U 1 1 5D07AF94
+P 1800 6100
+AR Path="/5CFC7757/5D07AF94" Ref="#PWR?"  Part="1" 
+AR Path="/5CFEE74D/5D07AF94" Ref="#PWR?"  Part="1" 
+AR Path="/5CE81FF5/5D07AF94" Ref="#PWR?"  Part="1" 
+AR Path="/5CE982AE/5D07AF94" Ref="#PWR?"  Part="1" 
+AR Path="/5BA655A7/5D01C728/5D07AF94" Ref="#PWR?"  Part="1" 
+AR Path="/5D01CD70/5D07AF94" Ref="#PWR?"  Part="1" 
+AR Path="/5D08CCAD/5D07AF94" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FD0/5D07AF94" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FE1/5D07AF94" Ref="#PWR0148"  Part="1" 
+F 0 "#PWR0148" H 1800 5850 50  0001 C CNN
+F 1 "GND" H 1800 5950 50  0000 C CNN
+F 2 "" H 1800 6100 50  0001 C CNN
+F 3 "" H 1800 6100 50  0001 C CNN
+	1    1800 6100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1750 5500 2450 5500
+$Comp
+L power:GND #PWR?
+U 1 1 5D07AF97
+P 1950 7600
+AR Path="/5CFC7757/5D07AF97" Ref="#PWR?"  Part="1" 
+AR Path="/5CFEE74D/5D07AF97" Ref="#PWR?"  Part="1" 
+AR Path="/5CE81FF5/5D07AF97" Ref="#PWR?"  Part="1" 
+AR Path="/5CE982AE/5D07AF97" Ref="#PWR?"  Part="1" 
+AR Path="/5BA655A7/5D01C728/5D07AF97" Ref="#PWR?"  Part="1" 
+AR Path="/5D01CD70/5D07AF97" Ref="#PWR?"  Part="1" 
+AR Path="/5D08CCAD/5D07AF97" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FD0/5D07AF97" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FE1/5D07AF97" Ref="#PWR0149"  Part="1" 
+F 0 "#PWR0149" H 1950 7350 50  0001 C CNN
+F 1 "GND" H 1950 7450 50  0000 C CNN
+F 2 "" H 1950 7600 50  0001 C CNN
+F 3 "" H 1950 7600 50  0001 C CNN
+	1    1950 7600
+	0    -1   -1   0   
+$EndComp
+Connection ~ 1950 7600
+Connection ~ 1800 6100
+Wire Wire Line
+	2450 6350 2450 5500
+Wire Wire Line
+	2450 6450 2550 6450
+Wire Wire Line
+	2550 6450 2550 6000
+Wire Wire Line
+	2000 6350 2000 5600
+Connection ~ 2000 6350
+Wire Wire Line
+	2000 6350 2050 6350
+Connection ~ 2000 5600
+$Comp
+L SerialIOProc-rescue:SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_-OPL_Discrete_Semiconductor Q79
+U 1 1 5D07AF9A
+P 2950 5400
+F 0 "Q79" V 3000 5250 45  0000 C CNN
+F 1 "SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_" V 3191 5400 45  0001 C CNN
+F 2 "OPL_Discrete_Semiconductor:SOT-23" H 2950 5400 50  0001 C CNN
+F 3 "" H 2950 5400 50  0001 C CNN
+F 4 "NCE3407A" V 3000 5550 20  0000 C CNN "MPN"
+F 5 "305030010" H 2980 5550 20  0001 C CNN "SKU"
+	1    2950 5400
+	0    1    1    0   
+$EndComp
+$Comp
+L SerialIOProc-rescue:SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_-OPL_Discrete_Semiconductor Q80
+U 1 1 5D26D842
+P 2950 5600
+F 0 "Q80" V 3000 5450 45  0000 C CNN
+F 1 "SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_" V 3191 5600 45  0001 C CNN
+F 2 "OPL_Discrete_Semiconductor:SOT-23" H 2950 5600 50  0001 C CNN
+F 3 "" H 2950 5600 50  0001 C CNN
+F 4 "NCE3407A" V 3000 5750 20  0000 C CNN "MPN"
+F 5 "305030010" H 2980 5750 20  0001 C CNN "SKU"
+	1    2950 5600
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	1750 6000 2550 6000
+Wire Wire Line
+	2450 5500 2450 5200
+Wire Wire Line
+	2450 5200 2950 5200
+Connection ~ 2450 5500
+Wire Wire Line
+	2550 6000 2950 6000
+Connection ~ 2550 6000
+Wire Wire Line
+	1900 5400 2750 5400
+Wire Wire Line
+	2000 5600 2750 5600
+$Comp
+L SerialIOProc-rescue:SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_-OPL_Discrete_Semiconductor Q75
+U 1 1 5D07AFA0
+P 2900 6900
+F 0 "Q75" V 2950 6750 45  0000 C CNN
+F 1 "SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_" V 3141 6900 45  0001 C CNN
+F 2 "OPL_Discrete_Semiconductor:SOT-23" H 2900 6900 50  0001 C CNN
+F 3 "" H 2900 6900 50  0001 C CNN
+F 4 "NCE3407A" V 2950 7050 20  0000 C CNN "MPN"
+F 5 "305030010" H 2930 7050 20  0001 C CNN "SKU"
+	1    2900 6900
+	0    1    1    0   
+$EndComp
+$Comp
+L SerialIOProc-rescue:SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_-OPL_Discrete_Semiconductor Q76
+U 1 1 5D26D85A
+P 2900 7100
+F 0 "Q76" V 2950 6950 45  0000 C CNN
+F 1 "SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_" V 3141 7100 45  0001 C CNN
+F 2 "OPL_Discrete_Semiconductor:SOT-23" H 2900 7100 50  0001 C CNN
+F 3 "" H 2900 7100 50  0001 C CNN
+F 4 "NCE3407A" V 2950 7250 20  0000 C CNN "MPN"
+F 5 "305030010" H 2930 7250 20  0001 C CNN "SKU"
+	1    2900 7100
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	2550 6550 2900 6550
+Wire Wire Line
+	2900 6550 2900 6700
+Connection ~ 2550 6550
+Wire Wire Line
+	2450 6650 2450 7500
+Wire Wire Line
+	2900 7300 2900 7500
+Wire Wire Line
+	2900 7500 2450 7500
+Connection ~ 2450 7500
+$Comp
+L Device:R_Pack04 RN?
+U 1 1 5D07AFA7
+P 5550 6400
+AR Path="/5CFC7757/5D07AFA7" Ref="RN?"  Part="1" 
+AR Path="/5CFEE74D/5D07AFA7" Ref="RN?"  Part="1" 
+AR Path="/5CE81FF5/5D07AFA7" Ref="RN?"  Part="1" 
+AR Path="/5CE982AE/5D07AFA7" Ref="RN?"  Part="1" 
+AR Path="/5BA655A7/5D01C728/5D07AFA7" Ref="RN?"  Part="1" 
+AR Path="/5D01CD70/5D07AFA7" Ref="RN?"  Part="1" 
+AR Path="/5D08CCAD/5D07AFA7" Ref="RN?"  Part="1" 
+AR Path="/5D117FD0/5D07AFA7" Ref="RN?"  Part="1" 
+AR Path="/5D117FE1/5D07AFA7" Ref="RN46"  Part="1" 
+F 0 "RN46" V 5250 6400 50  0000 C CNN
+F 1 "R_Pack04" V 5750 6400 50  0000 C CNN
+F 2 "CLRConnector:2012-8" V 5825 6400 50  0001 C CNN
+F 3 "" H 5550 6400 50  0001 C CNN
+	1    5550 6400
+	0    -1   1    0   
+$EndComp
+$Comp
+L CLRLibrary:6N7002 Q?
+U 1 1 5D07AFA9
+P 4700 6750
+AR Path="/5BA655A7/5D01C728/5D07AFA9" Ref="Q?"  Part="1" 
+AR Path="/5D01CD70/5D07AFA9" Ref="Q?"  Part="1" 
+AR Path="/5D08CCAD/5D07AFA9" Ref="Q?"  Part="1" 
+AR Path="/5D117FD0/5D07AFA9" Ref="Q?"  Part="1" 
+AR Path="/5D117FE1/5D07AFA9" Ref="Q85"  Part="1" 
+F 0 "Q85" H 4850 6897 60  0000 C CNN
+F 1 "2N7002DW-7-F" H 4850 6791 60  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering" H 4700 6750 60  0001 C CNN
+F 3 "" H 4700 6750 60  0001 C CNN
+	1    4700 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L CLRLibrary:6N7002 Q?
+U 2 1 5D07AFAC
+P 4700 7250
+AR Path="/5BA655A7/5D01C728/5D07AFAC" Ref="Q?"  Part="2" 
+AR Path="/5D01CD70/5D07AFAC" Ref="Q?"  Part="2" 
+AR Path="/5D08CCAD/5D07AFAC" Ref="Q?"  Part="2" 
+AR Path="/5D117FD0/5D07AFAC" Ref="Q?"  Part="2" 
+AR Path="/5D117FE1/5D07AFAC" Ref="Q85"  Part="2" 
+F 0 "Q85" H 4850 7397 60  0000 C CNN
+F 1 "2N7002DW-7-F" H 4850 7291 60  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering" H 4700 7250 60  0001 C CNN
+F 3 "" H 4700 7250 60  0001 C CNN
+	2    4700 7250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 6200 5300 6200
+Wire Wire Line
+	5350 6200 5350 6300
+Connection ~ 5350 6200
+Connection ~ 5350 6300
+Wire Wire Line
+	5350 6300 5350 6400
+Connection ~ 5350 6400
+Wire Wire Line
+	5350 6400 5350 6500
+Wire Wire Line
+	5350 6500 5350 6750
+Wire Wire Line
+	5350 6750 6000 6750
+Connection ~ 5350 6500
+Wire Wire Line
+	5350 6750 5350 6950
+Wire Wire Line
+	5350 6950 6000 6950
+Connection ~ 5350 6750
+Text Label 4700 6200 0    50   ~ 0
+SAMPWR
+Wire Wire Line
+	5750 6400 5850 6400
+Wire Wire Line
+	5850 6400 5850 6850
+Wire Wire Line
+	5850 6850 5200 6850
+Wire Wire Line
+	5750 7350 5200 7350
+Wire Wire Line
+	5200 6950 5250 6950
+Wire Wire Line
+	5250 6950 5250 7450
+Wire Wire Line
+	5250 7450 5200 7450
+$Comp
+L CLRLibrary:6N7002 Q?
+U 1 1 5D07AFAE
+P 4550 5250
+AR Path="/5BA655A7/5D01C728/5D07AFAE" Ref="Q?"  Part="1" 
+AR Path="/5D01CD70/5D07AFAE" Ref="Q?"  Part="1" 
+AR Path="/5D08CCAD/5D07AFAE" Ref="Q?"  Part="1" 
+AR Path="/5D117FD0/5D07AFAE" Ref="Q?"  Part="1" 
+AR Path="/5D117FE1/5D07AFAE" Ref="Q83"  Part="1" 
+F 0 "Q83" H 4700 5397 60  0000 C CNN
+F 1 "2N7002DW-7-F" H 4700 5291 60  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering" H 4550 5250 60  0001 C CNN
+F 3 "" H 4550 5250 60  0001 C CNN
+	1    4550 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CLRLibrary:6N7002 Q?
+U 2 1 5D07AFB3
+P 4550 5750
+AR Path="/5BA655A7/5D01C728/5D07AFB3" Ref="Q?"  Part="2" 
+AR Path="/5D01CD70/5D07AFB3" Ref="Q?"  Part="2" 
+AR Path="/5D08CCAD/5D07AFB3" Ref="Q?"  Part="2" 
+AR Path="/5D117FD0/5D07AFB3" Ref="Q?"  Part="2" 
+AR Path="/5D117FE1/5D07AFB3" Ref="Q83"  Part="2" 
+F 0 "Q83" H 4700 5897 60  0000 C CNN
+F 1 "2N7002DW-7-F" H 4700 5791 60  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering" H 4550 5750 60  0001 C CNN
+F 3 "" H 4550 5750 60  0001 C CNN
+	2    4550 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 5250 5200 5450
+Wire Wire Line
+	5200 5450 5300 5450
+Wire Wire Line
+	5050 5450 5100 5450
+Wire Wire Line
+	5100 5450 5100 5950
+Wire Wire Line
+	5100 5950 5050 5950
+$Comp
+L power:GND #PWR?
+U 1 1 5D07AFB4
+P 5100 5950
+AR Path="/5CFC7757/5D07AFB4" Ref="#PWR?"  Part="1" 
+AR Path="/5CFEE74D/5D07AFB4" Ref="#PWR?"  Part="1" 
+AR Path="/5CE81FF5/5D07AFB4" Ref="#PWR?"  Part="1" 
+AR Path="/5CE982AE/5D07AFB4" Ref="#PWR?"  Part="1" 
+AR Path="/5BA655A7/5D01C728/5D07AFB4" Ref="#PWR?"  Part="1" 
+AR Path="/5D01CD70/5D07AFB4" Ref="#PWR?"  Part="1" 
+AR Path="/5D08CCAD/5D07AFB4" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FD0/5D07AFB4" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FE1/5D07AFB4" Ref="#PWR0150"  Part="1" 
+F 0 "#PWR0150" H 5100 5700 50  0001 C CNN
+F 1 "GND" H 5100 5800 50  0000 C CNN
+F 2 "" H 5100 5950 50  0001 C CNN
+F 3 "" H 5100 5950 50  0001 C CNN
+	1    5100 5950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5050 5350 5750 5350
+$Comp
+L power:GND #PWR?
+U 1 1 5D07AFB7
+P 5250 7450
+AR Path="/5CFC7757/5D07AFB7" Ref="#PWR?"  Part="1" 
+AR Path="/5CFEE74D/5D07AFB7" Ref="#PWR?"  Part="1" 
+AR Path="/5CE81FF5/5D07AFB7" Ref="#PWR?"  Part="1" 
+AR Path="/5CE982AE/5D07AFB7" Ref="#PWR?"  Part="1" 
+AR Path="/5BA655A7/5D01C728/5D07AFB7" Ref="#PWR?"  Part="1" 
+AR Path="/5D01CD70/5D07AFB7" Ref="#PWR?"  Part="1" 
+AR Path="/5D08CCAD/5D07AFB7" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FD0/5D07AFB7" Ref="#PWR?"  Part="1" 
+AR Path="/5D117FE1/5D07AFB7" Ref="#PWR0151"  Part="1" 
+F 0 "#PWR0151" H 5250 7200 50  0001 C CNN
+F 1 "GND" H 5250 7300 50  0000 C CNN
+F 2 "" H 5250 7450 50  0001 C CNN
+F 3 "" H 5250 7450 50  0001 C CNN
+	1    5250 7450
+	0    -1   -1   0   
+$EndComp
+Connection ~ 5250 7450
+Connection ~ 5100 5950
+Wire Wire Line
+	5750 6200 5750 5350
+Wire Wire Line
+	5750 6300 5850 6300
+Wire Wire Line
+	5850 6300 5850 5850
+Wire Wire Line
+	5300 6200 5300 5450
+Connection ~ 5300 6200
+Wire Wire Line
+	5300 6200 5350 6200
+Connection ~ 5300 5450
+$Comp
+L SerialIOProc-rescue:SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_-OPL_Discrete_Semiconductor Q91
+U 1 1 5D07AFBC
+P 6250 5250
+F 0 "Q91" V 6300 5100 45  0000 C CNN
+F 1 "SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_" V 6491 5250 45  0001 C CNN
+F 2 "OPL_Discrete_Semiconductor:SOT-23" H 6250 5250 50  0001 C CNN
+F 3 "" H 6250 5250 50  0001 C CNN
+F 4 "NCE3407A" V 6300 5400 20  0000 C CNN "MPN"
+F 5 "305030010" H 6280 5400 20  0001 C CNN "SKU"
+	1    6250 5250
+	0    1    1    0   
+$EndComp
+$Comp
+L SerialIOProc-rescue:SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_-OPL_Discrete_Semiconductor Q92
+U 1 1 5D07AFBE
+P 6250 5450
+F 0 "Q92" V 6300 5300 45  0000 C CNN
+F 1 "SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_" V 6491 5450 45  0001 C CNN
+F 2 "OPL_Discrete_Semiconductor:SOT-23" H 6250 5450 50  0001 C CNN
+F 3 "" H 6250 5450 50  0001 C CNN
+F 4 "NCE3407A" V 6300 5600 20  0000 C CNN "MPN"
+F 5 "305030010" H 6280 5600 20  0001 C CNN "SKU"
+	1    6250 5450
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	5050 5850 5850 5850
+Wire Wire Line
+	5750 5350 5750 5050
+Wire Wire Line
+	5750 5050 6250 5050
+Connection ~ 5750 5350
+Wire Wire Line
+	5850 5850 6250 5850
+Connection ~ 5850 5850
+Wire Wire Line
+	5200 5250 6050 5250
+Wire Wire Line
+	5300 5450 6050 5450
+$Comp
+L SerialIOProc-rescue:SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_-OPL_Discrete_Semiconductor Q87
+U 1 1 5D07AFC1
+P 6200 6750
+F 0 "Q87" V 6250 6600 45  0000 C CNN
+F 1 "SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_" V 6441 6750 45  0001 C CNN
+F 2 "OPL_Discrete_Semiconductor:SOT-23" H 6200 6750 50  0001 C CNN
+F 3 "" H 6200 6750 50  0001 C CNN
+F 4 "NCE3407A" V 6250 6900 20  0000 C CNN "MPN"
+F 5 "305030010" H 6230 6900 20  0001 C CNN "SKU"
+	1    6200 6750
+	0    1    1    0   
+$EndComp
+$Comp
+L SerialIOProc-rescue:SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_-OPL_Discrete_Semiconductor Q88
+U 1 1 5D07AFC3
+P 6200 6950
+F 0 "Q88" V 6250 6800 45  0000 C CNN
+F 1 "SMD-MOSFET-P-CH-VDC=30V-ID=4.3A-NCE3407A_SOT-23_" V 6441 6950 45  0001 C CNN
+F 2 "OPL_Discrete_Semiconductor:SOT-23" H 6200 6950 50  0001 C CNN
+F 3 "" H 6200 6950 50  0001 C CNN
+F 4 "NCE3407A" V 6250 7100 20  0000 C CNN "MPN"
+F 5 "305030010" H 6230 7100 20  0001 C CNN "SKU"
+	1    6200 6950
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	5850 6400 6200 6400
+Wire Wire Line
+	6200 6400 6200 6550
+Connection ~ 5850 6400
+Wire Wire Line
+	5750 6500 5750 7350
+Wire Wire Line
+	6200 7150 6200 7350
+Wire Wire Line
+	6200 7350 5750 7350
+Connection ~ 5750 7350
+Wire Wire Line
+	3150 5400 3800 5400
+Wire Wire Line
+	3150 5600 3800 5600
+Wire Wire Line
+	3100 6900 3750 6900
+Wire Wire Line
+	3100 7100 3750 7100
+Wire Wire Line
+	6400 6750 7050 6750
+Wire Wire Line
+	6400 6950 7050 6950
+Wire Wire Line
+	6450 5250 7100 5250
+Wire Wire Line
+	6450 5450 7100 5450
+Wire Wire Line
+	2950 6000 2950 5800
+Wire Wire Line
+	6250 5850 6250 5650
+Wire Wire Line
+	6300 1400 6300 1200
+Text GLabel 2200 3700 0    50   Input ~ 0
+OutRST
+Text GLabel 2200 3500 0    50   Input ~ 0
+OutRegLoad
+Wire Wire Line
+	2200 3700 2300 3700
+Wire Wire Line
+	2300 3700 2300 4150
+Connection ~ 2300 4150
+Wire Wire Line
+	2300 4150 1850 4150
+Wire Wire Line
+	2200 3600 2350 3600
+Wire Wire Line
+	2350 3600 2350 4050
+Connection ~ 2350 4050
+Wire Wire Line
+	2350 4050 2500 4050
+Wire Wire Line
+	2200 3500 2450 3500
+Wire Wire Line
+	2450 3500 2450 4350
+Connection ~ 2450 4350
+Wire Wire Line
+	2450 4350 2400 4350
+Text GLabel 2200 3600 0    50   Input ~ 0
+OutSerCK
+Text GLabel 1500 4600 0    50   Input ~ 0
+SAMPWR
+Wire Wire Line
+	1500 4600 1750 4600
+Wire Wire Line
+	1750 4600 1750 4850
+Text GLabel 1500 3700 0    50   Input ~ 0
+SAMCX
+Wire Wire Line
+	1500 3700 1600 3700
+Wire Wire Line
+	1600 3700 1600 3850
+Connection ~ 1600 3850
+Wire Wire Line
+	1600 3850 2500 3850
+Text GLabel 7650 4650 0    50   Input ~ 0
+SAMDX
+Wire Wire Line
+	7650 4650 7800 4650
+Wire Wire Line
+	7800 4650 7800 4750
+Wire Bus Line
+	10200 4350 10200 6450
+Connection ~ 7800 4750
+Wire Wire Line
+	7800 4750 6400 4750
+$EndSCHEMATC

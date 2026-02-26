@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<dumps>
+  <platform name="win32A" char_bit="8" short_bit="16" int_bit="32" long_bit="32" long_long_bit="64" pointer_bit="32"/>
+  <rawtokens>
+    <file index="0" name="mcc_generated_files/interrupt_manager.h"/>
+    <tok fileIndex="0" linenr="1" column="1" str="/**x  Generated Interrupt Manager Header Filexx  @Company:x    Microchip Technology Inc.xx  @File Name:x    interrupt_manager.hxx  @Summary:x    This is the Interrupt Manager file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUsxx  @Description:x    This header file provides implementations for global interrupt handling.x    For individual peripheral handlers please see the peripheral driver forx    all modules selected in the GUI.x    Generation Information :x        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.7x        Device            :  PIC18F46Q10x        Driver Version    :  2.03x    The generated drivers are tested against the following:x        Compiler          :  XC8 2.31 and above or laterx        MPLAB x          :  MPLAB X 5.45x*/"/>
+    <tok fileIndex="0" linenr="26" column="1" str="/*x    (c) 2018 Microchip Technology Inc. and its subsidiaries. x    x    Subject to your compliance with these terms, you may use Microchip software and any x    derivatives exclusively with Microchip products. It is your responsibility to comply with third party x    license terms applicable to your use of third party software (including open source software) that x    may accompany Microchip software.x    x    THIS SOFTWARE IS SUPPLIED BY MICROCHIP &quot;AS IS&quot;. NO WARRANTIES, WHETHER x    EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY x    IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS x    FOR A PARTICULAR PURPOSE.x    x    IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, x    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND x    WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP x    HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO x    THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL x    CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT x    OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS x    SOFTWARE.x*/"/>
+    <tok fileIndex="0" linenr="49" column="1" str="#"/>
+    <tok fileIndex="0" linenr="49" column="2" str="ifndef"/>
+    <tok fileIndex="0" linenr="49" column="9" str="INTERRUPT_MANAGER_H"/>
+    <tok fileIndex="0" linenr="50" column="1" str="#"/>
+    <tok fileIndex="0" linenr="50" column="2" str="define"/>
+    <tok fileIndex="0" linenr="50" column="9" str="INTERRUPT_MANAGER_H"/>
+    <tok fileIndex="0" linenr="53" column="1" str="/** * @Param    none * @Returns    none * @Description    This macro will enable global interrupts. * @Example    INTERRUPT_GlobalInterruptEnable(); */"/>
+    <tok fileIndex="0" linenr="63" column="1" str="#"/>
+    <tok fileIndex="0" linenr="63" column="2" str="define"/>
+    <tok fileIndex="0" linenr="63" column="9" str="INTERRUPT_GlobalInterruptEnable"/>
+    <tok fileIndex="0" linenr="63" column="40" str="("/>
+    <tok fileIndex="0" linenr="63" column="41" str=")"/>
+    <tok fileIndex="0" linenr="63" column="43" str="("/>
+    <tok fileIndex="0" linenr="63" column="44" str="INTCONbits"/>
+    <tok fileIndex="0" linenr="63" column="54" str="."/>
+    <tok fileIndex="0" linenr="63" column="55" str="GIE"/>
+    <tok fileIndex="0" linenr="63" column="59" str="="/>
+    <tok fileIndex="0" linenr="63" column="61" str="1"/>
+    <tok fileIndex="0" linenr="63" column="62" str=")"/>
+    <tok fileIndex="0" linenr="65" column="1" str="/**x * @Paramx    nonex * @Returnsx    nonex * @Descriptionx    This macro will disable global interrupts.x * @Examplex    INTERRUPT_GlobalInterruptDisable();x */"/>
+    <tok fileIndex="0" linenr="75" column="1" str="#"/>
+    <tok fileIndex="0" linenr="75" column="2" str="define"/>
+    <tok fileIndex="0" linenr="75" column="9" str="INTERRUPT_GlobalInterruptDisable"/>
+    <tok fileIndex="0" linenr="75" column="41" str="("/>
+    <tok fileIndex="0" linenr="75" column="42" str=")"/>
+    <tok fileIndex="0" linenr="75" column="44" str="("/>
+    <tok fileIndex="0" linenr="75" column="45" str="INTCONbits"/>
+    <tok fileIndex="0" linenr="75" column="55" str="."/>
+    <tok fileIndex="0" linenr="75" column="56" str="GIE"/>
+    <tok fileIndex="0" linenr="75" column="60" str="="/>
+    <tok fileIndex="0" linenr="75" column="62" str="0"/>
+    <tok fileIndex="0" linenr="75" column="63" str=")"/>
+    <tok fileIndex="0" linenr="76" column="1" str="/**x * @Paramx    nonex * @Returnsx    nonex * @Descriptionx    This macro will enable peripheral interrupts.x * @Examplex    INTERRUPT_PeripheralInterruptEnable();x */"/>
+    <tok fileIndex="0" linenr="86" column="1" str="#"/>
+    <tok fileIndex="0" linenr="86" column="2" str="define"/>
+    <tok fileIndex="0" linenr="86" column="9" str="INTERRUPT_PeripheralInterruptEnable"/>
+    <tok fileIndex="0" linenr="86" column="44" str="("/>
+    <tok fileIndex="0" linenr="86" column="45" str=")"/>
+    <tok fileIndex="0" linenr="86" column="47" str="("/>
+    <tok fileIndex="0" linenr="86" column="48" str="INTCONbits"/>
+    <tok fileIndex="0" linenr="86" column="58" str="."/>
+    <tok fileIndex="0" linenr="86" column="59" str="PEIE"/>
+    <tok fileIndex="0" linenr="86" column="64" str="="/>
+    <tok fileIndex="0" linenr="86" column="66" str="1"/>
+    <tok fileIndex="0" linenr="86" column="67" str=")"/>
+    <tok fileIndex="0" linenr="88" column="1" str="/**x * @Paramx    nonex * @Returnsx    nonex * @Descriptionx    This macro will disable peripheral interrupts.x * @Examplex    INTERRUPT_PeripheralInterruptDisable();x */"/>
+    <tok fileIndex="0" linenr="98" column="1" str="#"/>
+    <tok fileIndex="0" linenr="98" column="2" str="define"/>
+    <tok fileIndex="0" linenr="98" column="9" str="INTERRUPT_PeripheralInterruptDisable"/>
+    <tok fileIndex="0" linenr="98" column="45" str="("/>
+    <tok fileIndex="0" linenr="98" column="46" str=")"/>
+    <tok fileIndex="0" linenr="98" column="48" str="("/>
+    <tok fileIndex="0" linenr="98" column="49" str="INTCONbits"/>
+    <tok fileIndex="0" linenr="98" column="59" str="."/>
+    <tok fileIndex="0" linenr="98" column="60" str="PEIE"/>
+    <tok fileIndex="0" linenr="98" column="65" str="="/>
+    <tok fileIndex="0" linenr="98" column="67" str="0"/>
+    <tok fileIndex="0" linenr="98" column="68" str=")"/>
+    <tok fileIndex="0" linenr="100" column="1" str="/**x * @Paramx    nonex * @Returnsx    nonex * @Descriptionx    Initializes PIC18 peripheral interrupt priorities; enables/disables priority vectorsx * @Examplex    INTERRUPT_Initialize();x */"/>
+    <tok fileIndex="0" linenr="110" column="1" str="void"/>
+    <tok fileIndex="0" linenr="110" column="6" str="INTERRUPT_Initialize"/>
+    <tok fileIndex="0" linenr="110" column="27" str="("/>
+    <tok fileIndex="0" linenr="110" column="28" str="void"/>
+    <tok fileIndex="0" linenr="110" column="32" str=")"/>
+    <tok fileIndex="0" linenr="110" column="33" str=";"/>
+    <tok fileIndex="0" linenr="112" column="1" str="#"/>
+    <tok fileIndex="0" linenr="112" column="2" str="endif"/>
+    <tok fileIndex="0" linenr="112" column="9" str="// INTERRUPT_MANAGER_H"/>
+    <tok fileIndex="0" linenr="113" column="1" str="/** End of File*/"/>
+  </rawtokens>
+  <suppressions>
+  </suppressions>
+<dump cfg="">
+  <standards>
+    <c version="c11"/>
+    <cpp version="c++20"/>
+  </standards>
+  <directivelist>
+    <directive file="mcc_generated_files/interrupt_manager.h" linenr="49" str="#ifndef INTERRUPT_MANAGER_H"/>
+    <directive file="mcc_generated_files/interrupt_manager.h" linenr="50" str="#define INTERRUPT_MANAGER_H"/>
+    <directive file="mcc_generated_files/interrupt_manager.h" linenr="63" str="#define INTERRUPT_GlobalInterruptEnable() (INTCONbits.GIE = 1)"/>
+    <directive file="mcc_generated_files/interrupt_manager.h" linenr="75" str="#define INTERRUPT_GlobalInterruptDisable() (INTCONbits.GIE = 0)"/>
+    <directive file="mcc_generated_files/interrupt_manager.h" linenr="86" str="#define INTERRUPT_PeripheralInterruptEnable() (INTCONbits.PEIE = 1)"/>
+    <directive file="mcc_generated_files/interrupt_manager.h" linenr="98" str="#define INTERRUPT_PeripheralInterruptDisable() (INTCONbits.PEIE = 0)"/>
+    <directive file="mcc_generated_files/interrupt_manager.h" linenr="112" str="#endif"/>
+  </directivelist>
+  <tokenlist>
+    <token id="02C79DA0" file="mcc_generated_files/interrupt_manager.h" linenr="110" column="1" str="void" scope="02E8A318" type="name"/>
+    <token id="02C79EE0" file="mcc_generated_files/interrupt_manager.h" linenr="110" column="6" str="INTERRUPT_Initialize" scope="02E8A318" type="name" function="03296A00" astParent="02C79F20"/>
+    <token id="02C79F20" file="mcc_generated_files/interrupt_manager.h" linenr="110" column="27" str="(" scope="02E8A318" link="02C7A3E0" astOperand1="02C79EE0" valueType-type="void"/>
+    <token id="02C7A3E0" file="mcc_generated_files/interrupt_manager.h" linenr="110" column="32" str=")" scope="02E8A318" link="02C79F20"/>
+    <token id="024CA360" file="mcc_generated_files/interrupt_manager.h" linenr="110" column="33" str=";" scope="0271A3B0"/>
+  </tokenlist>
+  <scopes>
+    <scope id="0271A3B0" type="Global">
+      <functionList>
+        <function id="02B04B58" tokenDef="024C9DA0" name="INTERRUPT_Initialize" type="Function"/>
+      </functionList>
+    </scope>
+  </scopes>
+  <variables>
+  </variables>
+  <valueflow>
+  </valueflow>
+</dump>
+</dumps>

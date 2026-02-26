@@ -1,0 +1,190 @@
+// ConfigData.h
+// Organ-specific configuration data
+// Replace this file for each installation
+
+#ifndef CONFIG_DATA_H
+#define CONFIG_DATA_H
+
+#include "Config.h"
+
+// ============================================================
+// Chain Configuration (parallel arrays)
+// ============================================================
+// Example: 3 chains
+//   Chain 0: multidrop bidir (keyboards), 128 bits
+//   Chain 1: multidrop bidir (keyboards), 128 bits  
+//   Chain 2: shift-reg bidir (stops/pistons), 200 bits
+
+constexpr uint8_t NUM_CHAINS = 2;
+
+const uint8_t chainDataInPin[MAX_CHAINS]  = { 6,  1 };
+const uint8_t chainDataOutPin[MAX_CHAINS] = { 5,  0 };
+const uint8_t chainClockPin[MAX_CHAINS]   = {11,  3 };
+const uint8_t chainSyncPin[MAX_CHAINS]    = {10,  2 };
+const uint16_t chainBitsUsed[MAX_CHAINS]  = {144,64 };
+const uint8_t chainType[MAX_CHAINS]       = { CHAIN_TYPE_MULTIDROP, CHAIN_TYPE_SHIFTREG };
+const uint8_t chainDir[MAX_CHAINS]        = { CHAIN_DIR_INPUT, CHAIN_DIR_BIDIR };
+
+// ============================================================
+// MIDI Channel Assignments (0-indexed)
+// ============================================================
+
+constexpr uint8_t MIDI_CH_STOPS_1       = 0;   // Stops 0-127
+constexpr uint8_t MIDI_CH_STOPS_2       = 1;   // Stops 128-255
+constexpr uint8_t MIDI_CH_PISTONS       = 2;   // Pistons normal
+constexpr uint8_t MIDI_CH_PISTONS_SHIFT = 3;   // Pistons shifted
+constexpr uint8_t MIDI_CH_EXPRESSION    = 11;  // Expression CCs
+
+// Keyboard MIDI channels (per keyboard)
+constexpr uint8_t MIDI_CH_KEYBOARD_BASE = 4;   // Keyboards start at channel 4
+
+// ============================================================
+// Keyboard Configuration (parallel arrays)
+// ============================================================
+// Each keyboard is a contiguous range on a scan chain.
+// MIDI note sent = lowNote + (bit position - startBit)
+
+constexpr uint8_t NUM_KEYBOARDS = 4;
+
+const uint8_t  kbdChain[MAX_KEYBOARDS]    = { 0,  0,  0,  0 };
+const uint16_t kbdStartBit[MAX_KEYBOARDS] = { 0, 72, 64, 136 };
+const uint16_t kbdEndBit[MAX_KEYBOARDS]   = {60,132, 4, 4 };
+const uint8_t  kbdMidiChannel[MAX_KEYBOARDS] = { 
+    MIDI_CH_KEYBOARD_BASE + 0,  // Pedal
+    MIDI_CH_KEYBOARD_BASE + 1,  // Great
+    MIDI_CH_KEYBOARD_BASE,  // Swell
+    MIDI_CH_KEYBOARD_BASE   // Choir
+};
+const uint8_t  kbdLowNote[MAX_KEYBOARDS]  = {36, 36, 100, 103};  // MIDI note for first key
+const uint8_t  kbdVelocity[MAX_KEYBOARDS] = {127, 127, 127, 127};  // Fixed velocity
+
+// ============================================================
+// Stop Configuration (parallel arrays)
+// ============================================================
+// Stops are mapped to MIDI: stopIndex 0-127 → CH_STOPS_1, 128-255 → CH_STOPS_2
+// SAM stop: has senseAddr AND at least one coil address
+// Light stop: has senseAddr (toggle input) and lightAddr (output), no coils
+// Sense LOW = ON for SAM stops
+
+constexpr uint8_t NUM_STOPS = 20;  // Example
+
+// Physical sense input (CWB address)
+const uint16_t stopSenseAddr[MAX_STOPS] = {
+    0x200, 0x201, 0x202, 0x203, 0x204, 0x205, 0x206, 0x207,
+    0x208, 0x209, 0x20A, 0x20B, 0x20C, 0x20D, 0x20E, 0x20F,
+    0x210, 0x211, 0x212, 0x213
+};
+
+// SAM ON coil output (CWB address, ADDR_DISABLED if light stop)
+const uint16_t stopOnCoilAddr[MAX_STOPS] = {
+    0x280, 0x281, 0x282, 0x283, 0x284, 0x285, 0x286, 0x287,
+    0x288, 0x289, 0x28A, 0x28B, ADDR_DISABLED, ADDR_DISABLED,
+    ADDR_DISABLED, ADDR_DISABLED, ADDR_DISABLED, ADDR_DISABLED,
+    ADDR_DISABLED, ADDR_DISABLED
+};
+
+// SAM OFF coil output (CWB address, ADDR_DISABLED if light stop)
+const uint16_t stopOffCoilAddr[MAX_STOPS] = {
+    0x290, 0x291, 0x292, 0x293, 0x294, 0x295, 0x296, 0x297,
+    0x298, 0x299, 0x29A, 0x29B, ADDR_DISABLED, ADDR_DISABLED,
+    ADDR_DISABLED, ADDR_DISABLED, ADDR_DISABLED, ADDR_DISABLED,
+    ADDR_DISABLED, ADDR_DISABLED
+};
+
+// Light output (CWB address, for light stops or SAM indicators)
+const uint16_t stopLightAddr[MAX_STOPS] = {
+    ADDR_DISABLED, ADDR_DISABLED, ADDR_DISABLED, ADDR_DISABLED,
+    ADDR_DISABLED, ADDR_DISABLED, ADDR_DISABLED, ADDR_DISABLED,
+    ADDR_DISABLED, ADDR_DISABLED, ADDR_DISABLED, ADDR_DISABLED,
+    0x2C0, 0x2C1, 0x2C2, 0x2C3, 0x2C4, 0x2C5, 0x2C6, 0x2C7
+};
+
+// Per-stop SAM pulse time override (0 = use default SAM_PULSE_MS)
+const uint16_t stopPulseMs[MAX_STOPS] = { 0 };
+
+// ============================================================
+// Piston Configuration (parallel arrays)
+// ============================================================
+
+constexpr uint8_t NUM_PISTONS = 10;  // Example
+
+const uint16_t pistonInputAddr[MAX_PISTONS] = {
+    0x240, 0x241, 0x242, 0x243, 0x244,   // 5 generals
+    0x245, 0x246, 0x247,                  // 3 Swell divisionals
+    0x248,                                // General Cancel
+    0x249                                 // SHIFT
+};
+
+const uint8_t pistonType[MAX_PISTONS] = {
+    PISTON_GENERAL, PISTON_GENERAL, PISTON_GENERAL, PISTON_GENERAL, PISTON_GENERAL,
+    PISTON_DIVISIONAL, PISTON_DIVISIONAL, PISTON_DIVISIONAL,
+    PISTON_GENERAL_CANCEL,
+    PISTON_SHIFT
+};
+
+// For divisionals: which division (0-based). Ignored for generals.
+const uint8_t pistonDivision[MAX_PISTONS] = {
+    0, 0, 0, 0, 0,    // generals (ignored)
+    1, 1, 1,           // Swell = division 1
+    0,                 // GC (ignored)
+    0                  // SHIFT (ignored)
+};
+
+// Piston number within its type (e.g., General 1 = 0, General 2 = 1)
+const uint8_t pistonNumber[MAX_PISTONS] = {
+    0, 1, 2, 3, 4,    // Generals 1-5
+    0, 1, 2,           // Swell Div 1-3
+    0,                 // GC
+    0                  // SHIFT
+};
+
+// MIDI note for this piston (sent on MIDI_CH_PISTONS or shifted channel)
+const uint8_t pistonMidiNote[MAX_PISTONS] = {
+    0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+};
+
+// Piston indicator light output (ADDR_DISABLED if none)
+const uint16_t pistonLightAddr[MAX_PISTONS] = {
+    0x2D0, 0x2D1, 0x2D2, 0x2D3, 0x2D4,
+    0x2D5, 0x2D6, 0x2D7,
+    ADDR_DISABLED, ADDR_DISABLED
+};
+
+// ============================================================
+// Division names (for display)
+// ============================================================
+
+constexpr uint8_t NUM_DIVISIONS = 4;
+const char* const divisionName[MAX_DIVISIONS] = {
+    "Pedal", "Swell", "Great", "Choir"
+};
+
+// ============================================================
+// Expression / Analog Configuration
+// ============================================================
+
+constexpr uint8_t NUM_EXPRESSIONS = 2;
+
+const uint8_t  exprAnalogPin[MAX_EXPRESSIONS]   = { A0, A1 };
+const uint8_t  exprMidiCC[MAX_EXPRESSIONS]       = { 11, 11 };  // Expression CC
+const uint8_t  exprMidiChannel[MAX_EXPRESSIONS]  = { MIDI_CH_EXPRESSION, MIDI_CH_EXPRESSION };
+const uint8_t  exprDeadband[MAX_EXPRESSIONS]     = { 2, 2 };    // Noise threshold
+
+// ============================================================
+// SysEx Configuration
+// ============================================================
+// Hauptwerk SysEx format: F0 7D 01 <lcd#> 00 <ascii data...> F7
+// We look for specific LCD numbers and extract text at known offsets.
+
+constexpr uint8_t HW_SYSEX_MFG_ID       = 0x7D;
+constexpr uint8_t HW_SYSEX_MSG_TYPE      = 0x01;
+
+// LCD number that contains memory level and crescendo position
+// (configure based on your Hauptwerk setup)
+constexpr uint8_t HW_LCD_MEMORY_CRESC    = 0x05;  // Placeholder - set per installation
+constexpr uint8_t HW_MEM_TEXT_START      = 5;      // Byte offset for memory text
+constexpr uint8_t HW_MEM_TEXT_LEN        = 16;     // Length of memory text field
+constexpr uint8_t HW_CRESC_TEXT_START    = 25;     // Byte offset for crescendo text
+constexpr uint8_t HW_CRESC_TEXT_LEN      = 16;     // Length of crescendo text field
+
+#endif // CONFIG_DATA_H
