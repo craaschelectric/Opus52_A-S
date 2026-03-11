@@ -54,6 +54,10 @@ constexpr uint8_t CHAIN_DIR_OUTPUT = 1;
 constexpr uint8_t EXPR_ANALOG   = 0;
 constexpr uint8_t EXPR_DISCRETE = 1;
 
+// Minimum CC step change required before sending a new expression CC message.
+// Prevents jitter at step boundaries from generating a stream of CC messages.
+constexpr uint8_t EXPR_CC_DEADBAND = 2;
+
 // ============================================================
 // Serial MIDI
 // ============================================================

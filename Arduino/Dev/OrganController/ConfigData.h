@@ -73,14 +73,14 @@ constexpr uint8_t  SHIFT_MIDI_NOTE      = 127;
 // Touch Button MIDI Configuration
 // ============================================================
 
-constexpr uint8_t MEM_UP_MIDI_CHANNEL          = MIDI_CH_KEYBOARD_BASE + 2;  // 0-indexed
-constexpr uint8_t MEM_UP_MIDI_NOTE             = 126;
+constexpr uint8_t MEM_UP_MIDI_CHANNEL      = MIDI_CH_KEYBOARD_BASE + 2;  // 0-indexed
+constexpr uint8_t MEM_UP_MIDI_NOTE         = 126;
 
-constexpr uint8_t MEM_DOWN_MIDI_CHANNEL        = MIDI_CH_KEYBOARD_BASE + 2;  // 0-indexed
-constexpr uint8_t MEM_DOWN_MIDI_NOTE           = 127;
+constexpr uint8_t MEM_DOWN_MIDI_CHANNEL    = MIDI_CH_KEYBOARD_BASE + 2;  // 0-indexed
+constexpr uint8_t MEM_DOWN_MIDI_NOTE       = 127;
 
-constexpr uint8_t SAVE_BUTTON_MIDI_CHANNEL     = MIDI_CH_KEYBOARD_BASE + 2;  // 0-indexed
-constexpr uint8_t SAVE_BUTTON_MIDI_NOTE        = 125;
+constexpr uint8_t SAVE_BUTTON_MIDI_CHANNEL = MIDI_CH_KEYBOARD_BASE + 2;  // 0-indexed
+constexpr uint8_t SAVE_BUTTON_MIDI_NOTE    = 125;
 
 // ============================================================
 // SET Piston Configuration
@@ -88,7 +88,7 @@ constexpr uint8_t SAVE_BUTTON_MIDI_NOTE        = 125;
 // Physical input that sends MIDI while held and shows "SET" on display.
 // NoteOn on press, NoteOff on release.
 
-constexpr uint16_t SET_INPUT_ADDR      = 0x22f;  // CWB address (placeholder - adjust per wiring)
+constexpr uint16_t SET_INPUT_ADDR      = 0x225;  // CWB address (placeholder - adjust per wiring)
 constexpr uint8_t  SET_MIDI_CHANNEL    = MIDI_CH_KEYBOARD_BASE + 2;  // 0-indexed
 constexpr uint8_t  SET_MIDI_NOTE       = 126;
 
@@ -99,21 +99,22 @@ constexpr uint8_t  SET_MIDI_NOTE       = 126;
 // MIDI note sent = lowNote + (bit position - startBit)
 // Pistons are simply keyboard entries with their own channel/notes.
 
-constexpr uint8_t NUM_KEYBOARDS = 6; // Gt 1-60, Gt 61, Sw 1-48, Sw 49-60, Sw 61, Pistons
+constexpr uint8_t NUM_KEYBOARDS = 7; // Gt 1-60, Gt 61, Sw 1-48, Sw 49-60, Sw 61, Pistons, Extra
 
-const uint8_t  kbdChain[MAX_KEYBOARDS]       = {  0,  2,    0,    0,  2,   2 };
-const uint16_t kbdStartBit[MAX_KEYBOARDS]    = {  0,  0x61,0x48,0x3C, 0x60, 0x20};
-const uint16_t kbdEndBit[MAX_KEYBOARDS]      = { 59,  0x61,0x77,0x47, 0x60, 0x3F};
+const uint8_t  kbdChain[MAX_KEYBOARDS]       = {  0,  2,    0,    0,  2,   2,  2 };
+const uint16_t kbdStartBit[MAX_KEYBOARDS]    = {  0,  0x61,0x48,0x3C, 0x60, 0x20,  5};
+const uint16_t kbdEndBit[MAX_KEYBOARDS]      = { 59,  0x61,0x77,0x47, 0x60, 0x3F,  5};
 const uint8_t  kbdMidiChannel[MAX_KEYBOARDS] = {
     MIDI_CH_KEYBOARD_BASE + 0,  // Gt 1-60
     MIDI_CH_KEYBOARD_BASE + 0,  // Gt 61
     MIDI_CH_KEYBOARD_BASE + 1,      // Sw 1-48
     MIDI_CH_KEYBOARD_BASE + 1,      // Sw 49-60
     MIDI_CH_KEYBOARD_BASE + 1,      // Sw 61
-    MIDI_CH_KEYBOARD_BASE + 2       // Pistons
+    MIDI_CH_KEYBOARD_BASE + 2,      // Pistons
+    MIDI_CH_KEYBOARD_BASE + 2       // Extra
 };
-const uint8_t  kbdLowNote[MAX_KEYBOARDS]     = { 36,  96, 36, 84, 96, 0 };
-const uint8_t  kbdVelocity[MAX_KEYBOARDS]    = {127, 127, 127, 127, 127, 127 };
+const uint8_t  kbdLowNote[MAX_KEYBOARDS]     = { 36,  96, 36, 84, 96,  0, 16 };
+const uint8_t  kbdVelocity[MAX_KEYBOARDS]    = {127, 127, 127, 127, 127, 127, 127 };
 
 // ============================================================
 // Stop Configuration (parallel arrays)
@@ -405,18 +406,24 @@ const uint16_t inputInvertMask[MAX_CHAINS][WORDS_PER_CHAIN] = {
 constexpr uint8_t NUM_EXPRESSIONS = 2;
 
 // Type: EXPR_ANALOG or EXPR_DISCRETE
-const uint8_t exprType[MAX_EXPRESSIONS] = { EXPR_DISCRETE , EXPR_DISCRETE };
+const uint8_t exprType[MAX_EXPRESSIONS] = { EXPR_ANALOG, EXPR_ANALOG };
 
 // Common: MIDI CC number, channel, deadband
 const uint8_t exprMidiCC[MAX_EXPRESSIONS]      = { 11, 12};
 const uint8_t exprMidiChannel[MAX_EXPRESSIONS]  = { MIDI_CH_EXPRESSION, MIDI_CH_EXPRESSION };
-const uint8_t exprDeadband[MAX_EXPRESSIONS]     = { 0, 0 };
+const uint8_t exprDeadband[MAX_EXPRESSIONS]     = { EXPR_CC_DEADBAND, EXPR_CC_DEADBAND };
 
 // Analog-only: pin (ignored for discrete)
-const uint8_t exprAnalogPin[MAX_EXPRESSIONS]    = { 43, 43 };
+const uint8_t exprAnalogPin[MAX_EXPRESSIONS]    = { 14, 15 };
+
+// Analog-only: raw 10-bit min/max for scaling to 0-31.
+// Set min=0, max=1023 to use the full ADC range with no scaling.
+// Use serial debug output to determine actual pedal min/max, then set here.
+const uint16_t exprAnalogMin[MAX_EXPRESSIONS]   = {  550,  340 };
+const uint16_t exprAnalogMax[MAX_EXPRESSIONS]   = {  856,  595 };
 
 // Discrete-only: start and end CWB addresses (ignored for analog)
-const uint16_t exprDiscreteStart[MAX_EXPRESSIONS] = { 0x200, 0x210 };
+const uint16_t exprDiscreteStart[MAX_EXPRESSIONS] = { 0x206, 0x210 };
 const uint16_t exprDiscreteEnd[MAX_EXPRESSIONS]   = { 0x20F, 0x21F };
 
 // ============================================================

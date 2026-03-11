@@ -51,14 +51,11 @@ constexpr uint16_t COLOR_LINE   = 0x4208;  // Dark gray
 constexpr uint16_t COLOR_WARN   = 0xFD20;  // Orange
 
 // ============================================================
-// Touch Debug Helper + X-axis correction
+// Touch Debug Helper
 // ============================================================
-// With PORTRAIT_4PIN_TOP, the touch X axis is mirrored relative
-// to the display. Correct by remapping after each getTouchEvents().
 
 static void correctAndLogTouch() {
     if (ui.touchEventType != TOUCH_NO_EVENT) {
-        ui.touchEventX = SCREEN_W - ui.touchEventX;
         Serial.print("DBG: Touch type=");
         Serial.print(ui.touchEventType);
         Serial.print(" x=");

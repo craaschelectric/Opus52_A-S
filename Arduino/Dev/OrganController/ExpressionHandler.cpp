@@ -4,6 +4,7 @@
 #include "Debug.h"
 
 static uint8_t exprLastSent[MAX_EXPRESSIONS];
+static uint16_t exprLastRawBucket[MAX_EXPRESSIONS];
 
 void expressionInit() {
     memset(exprLastSent, 0xFF, sizeof(exprLastSent));  // Force first send
@@ -22,7 +23,21 @@ void processExpressions() {
         
         if (exprType[i] == EXPR_ANALOG) {
             uint16_t raw = analogRead(exprAnalogPin[i]);
-            value = raw >> 3;  // 10-bit to 7-bit (0-127)
+
+            // Debug: print raw value only when it moves 8+ counts away from last printed value
+            if ((uint16_t)abs((int16_t)raw - (int16_t)exprLastRawBucket[i]) >= 8) {
+                exprLastRawBucket[i] = raw;
+                Serial.print("DBG: Expr ");
+                Serial.print(i);
+                Serial.print(" raw=");
+                Serial.println(raw);
+            }
+
+            // Scale raw ADC value within [min, max] to 0-127
+            uint16_t lo = exprAnalogMin[i];
+            uint16_t hi = exprAnalogMax[i];
+            uint16_t clamped = raw < lo ? lo : (raw > hi ? hi : raw);
+            value = (uint8_t)(((uint32_t)(clamped - lo) * 31) / (hi - lo));
             
         } else {
             // EXPR_DISCRETE: count HIGH inputs in the CWB range
@@ -45,11 +60,8 @@ void processExpressions() {
             value = activeCount;
         }
         
-        // Deadband check
-        int16_t diff = (int16_t)value - (int16_t)exprLastSent[i];
-        if (diff == 0) continue;
-        if (diff < 0 && diff > -(int16_t)exprDeadband[i]) continue;
-        if (diff > 0 && diff < (int16_t)exprDeadband[i]) continue;
+        // Hysteresis: require value to move at least exprDeadband steps before sending
+        if (abs((int16_t)value - (int16_t)exprLastSent[i]) < exprDeadband[i]) continue;
         
         // Send all intermediate values between old and new
         uint8_t ch = exprMidiChannel[i] + 1;  // usbMIDI 1-indexed

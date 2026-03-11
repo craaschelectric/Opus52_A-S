@@ -1660,6 +1660,16 @@
 		)
 		(uuid "199e2f40-0e85-41d4-8f2d-4b691956c243")
 	)
+	(text "RB0 Tx\nRB4 Rx"
+		(exclude_from_sim no)
+		(at 204.47 67.31 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "1ccc4f46-fde6-42c6-8728-3d502bd79df9")
+	)
 	(text "InChOut1"
 		(exclude_from_sim no)
 		(at 50.292 143.256 0)
@@ -1689,6 +1699,26 @@
 			)
 		)
 		(uuid "28882bd5-9d41-45ff-ba1e-32b1f2afda08")
+	)
+	(text "RB4 TX"
+		(exclude_from_sim no)
+		(at 204.216 96.774 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "2be42d37-9271-4571-9990-df208c17f343")
+	)
+	(text "Pedal Tx on pin 1, 19200 baud (debug leftover, works so leave it)"
+		(exclude_from_sim no)
+		(at 102.362 19.304 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "357f01d2-503d-4910-b481-47cd17124777")
 	)
 	(text "MIDIExtenderRevB\nRJ:\nPin1-+V\nPin2-GND\nPin5-MIDITX+\nPin6-MIDITXDATA\n"
 		(exclude_from_sim no)
@@ -1931,6 +1961,16 @@
 		)
 		(uuid "93669dfc-253f-4a21-82cb-e46edd514778")
 	)
+	(text "1-15,17-24"
+		(exclude_from_sim no)
+		(at 204.724 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "9ec98381-8202-4344-970a-311ade468bf9")
+	)
 	(text "156Trunk(6)"
 		(exclude_from_sim no)
 		(at 171.958 57.404 0)
@@ -2024,7 +2064,7 @@
 	)
 	(text "SAMs use common wire for switch and magnets\nSo we will use Negative Common\nDrivers are SamDriver32 RevB 20190826"
 		(exclude_from_sim no)
-		(at 57.658 18.034 0)
+		(at 146.304 185.674 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2081,6 +2121,16 @@
 			)
 		)
 		(uuid "e7bccf4a-0923-4404-96f8-533ebe603acd")
+	)
+	(text "25-32,Pistons1-13,blank,Ped16"
+		(exclude_from_sim no)
+		(at 214.376 82.804 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "e855f0c6-47e7-4e2c-9c8b-5debb1dc22ef")
 	)
 	(text "13-16"
 		(exclude_from_sim no)
@@ -2790,16 +2840,6 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 76.2) (xy 22.86 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "94373075-81d0-4872-98ae-b9d09f483f23")
-	)
-	(wire
-		(pts
 			(xy 185.42 82.55) (xy 176.53 82.55)
 		)
 		(stroke
@@ -2937,6 +2977,16 @@
 			(type default)
 		)
 		(uuid "b20dec92-3e06-4e67-bfff-3d51a9ac40ff")
+	)
+	(wire
+		(pts
+			(xy 22.86 76.2) (xy 34.29 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bed04f8b-00c7-40e1-a5d9-a24d2133ce5e")
 	)
 	(wire
 		(pts
