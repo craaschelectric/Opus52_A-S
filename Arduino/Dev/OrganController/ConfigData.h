@@ -90,7 +90,7 @@ constexpr uint8_t SAVE_BUTTON_MIDI_NOTE    = 125;
 
 constexpr uint16_t SET_INPUT_ADDR      = 0x225;  // CWB address (placeholder - adjust per wiring)
 constexpr uint8_t  SET_MIDI_CHANNEL    = MIDI_CH_KEYBOARD_BASE + 2;  // 0-indexed
-constexpr uint8_t  SET_MIDI_NOTE       = 126;
+constexpr uint8_t  SET_MIDI_NOTE       = 124;
 
 // ============================================================
 // Keyboard Configuration (parallel arrays)
